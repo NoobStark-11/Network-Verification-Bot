@@ -1,6 +1,5 @@
-import os
 from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID,START_IMG,TOS_LINK
-from pyrogram import filters 
+from pyrogram import filters ,enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
 VERIFY_MSG="""
@@ -97,6 +96,16 @@ async def verify(client,msg):
 ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ.
      """)
     
+@app.on_callback_query(filters.regex("yes_approved")
+async def _aproved(bot:app,callback_query:CallbackQuery):
+    admins=[]
+    for m in bot.get_chat_members(
+         VERIFICATION_CHANNEL_ID,filter=enums.ChatMembers.ADMINISTRATORS):
+        admins.append(m.user.id)
+    if callback_query.from_user.id in admins:
+        callback_query.message.edit_text("hii")
+    else:
+        pass
 
 
  
