@@ -26,7 +26,7 @@ async def yos(_, CallbackQuery):
         reply_markup=InlineKeyboardMarkup (
          [
          [
-          InlineKeyboardButton (text="yes i can",callback_data="yes_tag")
+          InlineKeyboardButton (text="yes i can",callback_data="yes_tag"),
           InlineKeyboardButton (text="no i can't ",callback_data="no_tag")
          ],
          ],
