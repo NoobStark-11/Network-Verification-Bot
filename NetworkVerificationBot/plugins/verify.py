@@ -100,7 +100,7 @@ async def verify(client,msg):
 async def _aproved(bot:app,callback_query:CallbackQuery):
     admins=[]
     for m in bot.get_chat_members(
-         VERIFICATION_CHANNEL_ID,filter=enums.ChatMembers.ADMINISTRATORS):
+         VERIFICATION_CHANNEL_ID,filter=enums.ChatMembersFilter.ADMINISTRATORS):
         admins.append(m.user.id)
     if callback_query.from_user.id in admins:
         callback_query.message.edit_text("hii")
