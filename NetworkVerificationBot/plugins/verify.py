@@ -4,7 +4,8 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
 VERIFY_MSG="""
-Hello, In order to verify yourself, Are you accepting our Tos (Terms of Service)?
+ʜᴇʏ **{}** ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ᴠᴇʀɪғʏ ʏᴏᴜʀsᴇʟғ , ᴀʀᴇ ʏᴏᴜ ᴀᴄᴄᴇᴘᴛɪɴɢ ᴏᴜʀ [ᴛᴇʀᴍs ᴀɴᴅ ᴄᴏɴᴅɪᴛɪᴏɴs]() (TOS) ?
+ɪғ ʏᴇs ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʏᴇs,ɪ ᴀᴄᴄᴇᴘᴛ ʙᴜᴛᴛᴏɴ ᴇʟsᴇ ɴᴏ,ɪ ᴅᴇᴄʟɪɴᴇ.
 """
 VERIFY_BUTTONS= [
          [
@@ -15,11 +16,19 @@ VERIFY_BUTTONS= [
          ],
       ]
 
+VERIFY_BUTTON= [
+         [
+           InlineKeyboardButton (text="approved",callback_data="yes_approved")
+         ],
+         [
+          InlineKeyboardButton (text="unappi",callback_data="no_approved")        
+         ],
+      ]
 
 
 @app.on_message(filters.command("verify"))
 async def verify(_,msg):
-    await msg.reply_text(VERIFY_MSG,
+    await msg.reply_text(VERIFY_MSG.format(msg.from_user.first_name),
       reply_markup=InlineKeyboardMarkup(VERIFY_BUTTONS)
       )
 
@@ -78,9 +87,9 @@ async def verify(client,msg):
 ➻ **ʀᴇᴀsᴏɴ :** `{reason.text}`
 ◎ ─━──━─❖─━──━─ ◎
 """,
-      reply_markup=InlineKeyboardMarkup (VERIFY_BUTTONS)
+      reply_markup=InlineKeyboardMarkup (VERIFY_BUTTON)
      )
-    await msg.reply_text("ok")
+    await msg.reply_text("")
     
 
 
