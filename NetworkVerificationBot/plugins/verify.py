@@ -9,10 +9,10 @@ VERIFY_MSG="""
 """
 VERIFY_BUTTONS= [
          [
-           InlineKeyboardButton (text="yes i accept",callback_data="yes_verify")
+           InlineKeyboardButton (text="ʏᴇs , ɪ ᴀᴄᴄᴇᴘᴛ",callback_data="yes_verify")
          ],
          [
-          InlineKeyboardButton (text="no,i decline",callback_data="no_verify")        
+          InlineKeyboardButton (text="ɴᴏ, ɪ ᴅᴇᴄʟɪɴᴇ",callback_data="no_verify")        
          ],
       ]
 
@@ -21,7 +21,7 @@ VERIFY_BUTTON= [
            InlineKeyboardButton (text="approved",callback_data="yes_approved")
          ],
          [
-          InlineKeyboardButton (text="unappi",callback_data="no_approved")        
+          InlineKeyboardButton (text="unapproved",callback_data="no_approved")        
          ],
       ]
 
@@ -89,7 +89,10 @@ async def verify(client,msg):
 """,
       reply_markup=InlineKeyboardMarkup (VERIFY_BUTTON)
      )
-    await msg.reply_text("")
+    await msg.reply_text("""
+    sᴜᴄᴄᴇssғᴜʟʟʏ ʏᴏᴜʀ ғᴏʀᴍ sᴜʙᴍɪᴛᴛᴇᴅ ᴛᴏ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ. ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ sᴏᴍᴇᴛɪᴍᴇ ᴛᴏ ɢᴇᴛ ᴏғғɪᴄɪᴀʟʏ ᴠᴇʀɪғɪᴇᴅ.
+ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ.
+     """)
     
 
 
