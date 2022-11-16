@@ -48,10 +48,7 @@ async def verify(client,msg):
     k =  await client.ask(id,"Your bots usernames:")
     l = await client.ask(id,"Your skills:")
     m = await client.ask(id,"Tell me about yourself in one message:")
-    
-@app.on_message(filters.command("proceed"))
-async def proceed (_,msg):
-     await msg.reply_text(f"{a.text}")  
+    await msg.reply_text(f"{a.text}")
 
 
  
