@@ -35,7 +35,7 @@ async def nope(_, CallbackQuery):
 @app.on_message(filters.command("continue"))
 async def verify(client,msg):
     id=msg.chat.id
-    ff = m.from_user
+    ff = msg.from_user
     user = await app.get_users(ff)
     id1=user.id
     a = await client.ask(id,"Mind putting our tag on your name?")
