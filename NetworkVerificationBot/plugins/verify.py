@@ -1,4 +1,4 @@
-from pyromod import * 
+from pyromod import listen
 from NetworkVerificationBot import app
 from pyrogram import filters 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
