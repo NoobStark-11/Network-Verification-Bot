@@ -19,7 +19,22 @@ async def verify(_,msg):
       reply_markup=InlineKeyboardMarkup(VERIFY_BUTTONS)
       )
 
-@app.on_callback_query(filters.regex("no_verify"))
+@app.on_callback_query(filters.regex("yes_verify"))
 async def yos(_, CallbackQuery):
+    query = CallbackQuery.message
+    await query.edit_text("Mind putting our tag on your name?",
+        reply_markup=InlineKeyboardMarkup (
+         [
+         [
+          InlineKeyboardButton (text="yes i can",callback_data="yes_tag")
+          InlineKeyboardButton (text="no i can't ",callback_data="no_tag")
+         ],
+         ],
+        ),
+      )
+      
+
+@app.on_callback_query(filters.regex("no_verify"))
+async def nope(_, CallbackQuery):
     query=CallbackQuery.message
     await query.edit_text("please consider to come back again")
