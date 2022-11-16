@@ -54,8 +54,8 @@ async def verify(client,msg):
     about = await client.ask(id,"ᴛᴇʟʟ ᴍᴇ sᴏᴍᴇᴛʜɪɴɢ ᴀʙᴏᴜᴛ ʏᴏᴜʀsᴇʟғ.")
     tag = await client.ask(id,"ᴄᴀɴ ʏᴏᴜ ᴘᴜᴛ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴛᴀɢ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ ?")
     reason = await client.ask(id,"ʜᴀᴠᴇ ᴀɴʏ  ʀᴇᴀsᴏɴ ᴛᴏ ᴊᴏɪɴɪɴɢ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ, ɪғ ʜᴀᴠᴇ ᴛʜᴇɴ ᴡʀɪᴛᴇ ɪᴛ ᴅᴏᴡɴ.")    
-    await app.send_photo(VERIFICATION_CHANNEL_ID,NETWORK_IMG, 
-    caption=f"""
+    await app.send_message(VERIFICATION_CHANNEL_ID,
+    """
 ╔════❰ 𝚅𝙴𝚁𝙸𝙵𝙸𝙲𝙰𝚃𝙸𝙾𝙽 𝙵𝙾𝚁𝙼 ❱═❍
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼ **ғɪʀsᴛ ɴᴀᴍᴇ :**{first_name}
