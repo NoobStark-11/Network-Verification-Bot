@@ -1,4 +1,4 @@
-from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID,START_IMG,TOS_LINK,APPROVED_CHANNEL_ID,ADMINS
+from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID, NETWORK_IMG,TOS_LINK,APPROVED_CHANNEL_ID,ADMINS
 from pyrogram import filters ,enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
