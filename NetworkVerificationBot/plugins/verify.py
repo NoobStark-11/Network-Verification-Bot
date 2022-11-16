@@ -38,7 +38,7 @@ async def verify(client,msg):
     ff = msg.from_user.first_name
     ff1 = msg.from_user.username
     ff3 = msg.from_user.photo.big_file_id
-    ff2 =  await bot.download_media(message=ff3)
+    ff2 =  await app.download_media(message=ff3)
     
     a = await client.ask(id,"Mind putting our tag on your name?")
     b = await client.ask(id,"Write the reason(s) for joining our network.")
