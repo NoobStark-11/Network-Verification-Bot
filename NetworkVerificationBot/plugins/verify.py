@@ -1,10 +1,7 @@
 from NetworkVerificationBot import app
 from pyrogram import filters 
-from pyrogram.types import (
-    InlineKeyboardButton, 
-    InlineKeyboardMarkup,
-    CallbackQuery 
-    )
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
+    
 VERIFY_MSG="""
 Hello, In order to verify yourself, Are you accepting our Tos (Terms of Service)?
 """
@@ -24,5 +21,5 @@ async def verify(_,msg):
 
 @app.on_message(filters.regex("yes_verify"))
 async def yos(_, CallbackQuery):
-    query=CallbackQuery.message
-    await query.edit_text("hii")
+   # que=CallbackQuery.message
+    await CallbackQuery.message.edit_text("hii")
