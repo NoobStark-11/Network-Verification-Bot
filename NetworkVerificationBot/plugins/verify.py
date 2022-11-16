@@ -21,5 +21,5 @@ async def verify(_,msg):
 
 @app.on_callback_query(filters.regex("no_verify"))
 async def yos(_, CallbackQuery):
-   # que=CallbackQuery.message
-    await CallbackQuery.message.edit_text("please consider to come back again")
+    query=CallbackQuery.message
+    await query.edit_text("please consider to come back again")
