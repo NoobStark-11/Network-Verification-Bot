@@ -1,3 +1,4 @@
+from typing import Dict, List, Union
 from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID, NETWORK_IMG,TOS_LINK,APPROVED_CHANNEL_ID,ADMINS
 from pyrogram import filters ,enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
@@ -25,12 +26,14 @@ VERIFY_BUTTON= [
          ],
       ]
 
-async def info(_,msg):    
-    first_name = msg.from_user.first_name
-    username = msg.from_user.username
-    user_id = msg.from_user.id
-    dc_id = msg.from_user.dc_id
-    return first_name,username,user_id,dc_id
+async def info(_,msg):
+    async with app:
+        first_name = msg.from_user.first_name
+        username = msg.from_user.username
+        user_id = msg.from_user.id
+        dc_id = msg.from_user.dc_id
+        return first_name,username,user_id,dc_id    
+    
 
 @app.on_message(filters.command("verify"))
 async def verify(_,msg):
