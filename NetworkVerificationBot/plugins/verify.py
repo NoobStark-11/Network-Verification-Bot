@@ -2,7 +2,7 @@ from typing import Dict, List, Union
 from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID, NETWORK_IMG,TOS_LINK,APPROVED_CHANNEL_ID,ADMINS
 from pyrogram import filters ,enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
-from NetworkVerificationBot.utils.info import info
+#from NetworkVerificationBot.utils.info import info
     
 VERIFY_MSG="""
 ʜᴇʏ **{}** ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ᴠᴇʀɪғʏ ʏᴏᴜʀsᴇʟғ , ᴀʀᴇ ʏᴏᴜ ᴀᴄᴄᴇᴘᴛɪɴɢ ᴏᴜʀ [ᴛᴇʀᴍs ᴀɴᴅ ᴄᴏɴᴅɪᴛɪᴏɴs]({}) (TOS) ?
