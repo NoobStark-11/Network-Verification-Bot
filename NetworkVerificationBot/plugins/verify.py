@@ -36,4 +36,9 @@ async def verify(client,msg):
     id=msg.chat.id
     a = await client.ask(id,"Mind putting our tag on your name?")
 
-    
+@app.on_message(filters.command("poll"))
+async def poll(client, message):
+    x=message.chat.id
+    a = await client.ask(x,"how many queries")
+    xx =await client.ask(x,"poll1 query")
+    xxx = await client.ask(x,"poll 1 query")    
