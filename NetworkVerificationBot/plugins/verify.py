@@ -19,7 +19,7 @@ async def verify(_,msg):
       reply_markup=InlineKeyboardMarkup(VERIFY_BUTTONS)
       )
 
-@app.on_callback_query(filters.regex("yes_verify"))
+@app.on_callback_query(filters.regex("no_verify"))
 async def yos(_, CallbackQuery):
    # que=CallbackQuery.message
-    await CallbackQuery.message.edit_text("hii")
+    await CallbackQuery.message.edit_text("please consider to come back again")
