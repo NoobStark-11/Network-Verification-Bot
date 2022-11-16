@@ -14,14 +14,14 @@ VERIFY_BUTTONS= [
           InlineKeyboardButton (text="no,i decline",callback_data="no_verify")        
          ],
       ]
-VERIFICATION_FORM="""
+VERIFICATION_FORM=f"""
 FIRST NAME: {first_name}
 USERNAME: {username}
 ID: {user_id}
 DC ID : {dc_id}
 LAST ONLINE: {last_online_date}
 
-CAN PUT TAG : {a.text
+CAN PUT TAG : {a.text}
 REASON FOR JOINING: {b.text}
 FULL NAME : {c.text}
 AGE : {d.text}
