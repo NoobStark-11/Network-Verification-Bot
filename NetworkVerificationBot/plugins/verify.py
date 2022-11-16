@@ -41,48 +41,43 @@ async def verify(client,msg):
     first_name = msg.from_user.first_name
     username = msg.from_user.username
     user_id = msg.from_user.id
-    dc_id = msg.from_user.dc_id
-    last_online_date = msg.from_user.last_online_date 
-    photo = msg.from_user.photo.big_file_id
-    media =  await app.download_media(message=photo)
-    
-    a = await client.ask(id,"Mind putting our tag on your name?")
-    b = await client.ask(id,"Write the reason(s) for joining our network.")
-    c = await client.ask(id,"Your full name:")
-    d = await client.ask(id,"Your Age:")
-    e = await client.ask(id,"Your Gender:")
-    f = await client.ask(id,"Country you belongs from?")
-    g = await client.ask(id,"Your github link:")
-    h = await client.ask(id,"Programming languages you know yet far are:")
-    i = await client.ask(id,"Your channels usernames:")
-    j = await client.ask(id,"Your groups usernames/links:")
-    k = await client.ask(id,"Your bots usernames:")
-    l = await client.ask(id,"Your skills:")
-    m = await client.ask(id,"Tell me about yourself in one message:")
+    dc_id = msg.from_user.dc_id            
+    full_name = await client.ask(id,"ᴡʜᴀᴛ ɪs ʏᴏᴜʀ ғᴜʟʟ ɴᴀᴍᴇ ?")
+    age = await client.ask(id,"ʜᴏᴡ ᴏʟᴅ ᴀʀᴇ ʏᴏᴜ ?")
+    gender = await client.ask(id,"ᴡʜᴀᴛ's ʏᴏᴜʀ ɢᴇɴᴅᴇʀ ?")
+    channels = await client.ask(id,"ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇs")
+    groups = await client.ask(id,"ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇs")
+    bots = await client.ask(id,"ʏᴏᴜʀ ʙᴏᴛ ᴜsᴇʀɴᴀᴍᴇs")
+    country = await client.ask(id,"ғʀᴏᴍ ᴡʜɪᴄʜ ᴄᴏᴜɴᴛʀʏ ʏᴏᴜ ʙᴇʟᴏɴɢ ᴛᴏ ?")
+    skills = await client.ask(id,"ʜᴀᴠᴇ ᴀɴʏ sᴋɪʟʟ ?")
+    github = await client.ask(id,"ʜᴀᴠᴇ ɢɪᴛʜᴜʙ ᴀᴄᴄᴏᴜᴛ..?\nɢɪᴠᴇ ᴍᴇ ᴛʜᴇ ʟɪɴᴋ")
+    about = await client.ask(id,"ᴛᴇʟʟ ᴍᴇ sᴏᴍᴇᴛʜɪɴɢ ᴀʙᴏᴜᴛ ʏᴏᴜʀsᴇʟғ.")
+    tag = await client.ask(id,"ᴄᴀɴ ʏᴏᴜ ᴘᴜᴛ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴛᴀɢ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ ?")
+    reason = await client.ask(id,"ʜᴀᴠᴇ ᴀɴʏ  ʀᴇᴀsᴏɴ ᴛᴏ ᴊᴏɪɴɪɴɢ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ, ɪғ ʜᴀᴠᴇ ᴛʜᴇɴ ᴡʀɪᴛᴇ ɪᴛ ᴅᴏᴡɴ.")    
     await app.send_photo(VERIFICATION_CHANNEL_ID,NETWORK_IMG, 
     caption=f"""
 ╔════❰ 𝚅𝙴𝚁𝙸𝙵𝙸𝙲𝙰𝚃𝙸𝙾𝙽 𝙵𝙾𝚁𝙼 ❱═❍
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼ **ғɪʀsᴛ ɴᴀᴍᴇ :**
-║┣⪼ **ᴜsᴇʀɴᴀᴍᴇ :**
-║┣⪼ **ᴜsᴇʀ ɪᴅ :**
-║┣⪼ **ᴅᴄ ɪᴅ :**
+║┣⪼ **ғɪʀsᴛ ɴᴀᴍᴇ :**{first_name}
+║┣⪼ **ᴜsᴇʀɴᴀᴍᴇ :**{username}
+║┣⪼ **ᴜsᴇʀ ɪᴅ :**{user_id}
+║┣⪼ **ᴅᴄ ɪᴅ :**{dc_id}
 ║╰━━━━━━━━━━━━━━━➣   
    ╭━━━━━━━━━━━━━━━➣
-║┣⪼ **ғᴜʟʟ ɴᴀᴍᴇ :**
-║┣⪼ **ᴀɢᴇ :**
-║┣⪼ **ɢᴇɴᴅᴇʀ :**
-║┣⪼ **ᴄʜᴀɴɴᴇʟs :**
-║┣⪼ **ɢʀᴏᴜᴘs :**
-║┣⪼ **ʙᴏᴛs :**
-║┣⪼ **ᴄᴏᴜɴᴛʀʏ :**
+║┣⪼ **ғᴜʟʟ ɴᴀᴍᴇ :**{full_name}
+║┣⪼ **ᴀɢᴇ :**{age}
+║┣⪼ **ɢᴇɴᴅᴇʀ :**{gender}
+║┣⪼ **ᴄʜᴀɴɴᴇʟs :**{channels}
+║┣⪼ **ɢʀᴏᴜᴘs :**{groups}
+║┣⪼ **ʙᴏᴛs :**{bots}
+║┣⪼ **ᴄᴏᴜɴᴛʀʏ :**{country}
 ║╰━━━━━━━━━━━━━━━➣
    ╭━━━━━━━━━━━━━━━➣
-║┣⪼ **sᴋɪʟʟs :**
-║┣⪼ **ɢɪᴛʜᴜʙ ʟɪɴᴋ :**
-║┣⪼ **ᴀʙᴏᴜᴛ :** 
-║┣⪼ **ᴄᴀɴ ᴘᴜᴛ ɴᴇᴛᴡᴏʀᴋ's ᴛᴀɢ :**
-║┣⪼ **ʀᴇᴀsᴏɴ :**
+║┣⪼ **sᴋɪʟʟs :**{skills}
+║┣⪼ **ɢɪᴛʜᴜʙ ʟɪɴᴋ :**{github}
+║┣⪼ **ᴀʙᴏᴜᴛ :**{about}
+║┣⪼ **ᴄᴀɴ ᴘᴜᴛ ɴᴇᴛᴡᴏʀᴋ's ᴛᴀɢ :**{tag}
+║┣⪼ **ʀᴇᴀsᴏɴ :**{reason}
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍
 """,
