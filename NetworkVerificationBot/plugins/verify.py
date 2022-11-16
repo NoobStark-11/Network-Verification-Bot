@@ -53,7 +53,7 @@ async def verify(client,msg):
     l = await client.ask(id,"Your skills:")
     m = await client.ask(id,"Tell me about yourself in one message:")
     await app.send_message(VERIFICATION_CHANNEL_ID,f"hii")
-    await msg.reply_text(f"your form submitted to channel wait for sometime to approve it {ff} {ff1}")
+    await msg.reply_text(f"your form submitted to channel wait for sometime to approve it [{ff}](https://t.me/{ff1})")
 
 
  
