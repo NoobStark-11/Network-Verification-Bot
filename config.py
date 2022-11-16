@@ -1,0 +1,7 @@
+class Config:
+    API_ID=16191628
+    API_HASH="7d5acccaf1df4f5b7a690b203fd1953e"
+    TOKEN="5716195352:AAGMJ3gpHJMPJVsyUCrE_J-B4B5zhwN2y0g"
+    NETWORK_IMG="https://telegra.ph/file/2c7a09bff109deec3e305.jpg"
+    TOS_LINK="https://t.me/c/1547036942/1021"
+    VERIFICATION_CHANNEL_ID=-1001715350671
