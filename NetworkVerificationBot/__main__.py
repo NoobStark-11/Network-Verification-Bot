@@ -1,5 +1,5 @@
 from pyrogram import filters
-from NetworkVerificationBot import app, NETWORK_IMG
+from NetworkVerificationBot import app, NETWORK_IMG,NETWORK_NAME,HQ_USERNAME, PUBLIC_APPROVED_CHANNEL_USERNAME
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 
 START_MSG="""
@@ -23,7 +23,7 @@ buttons = [
 @app.on_message(filters.command("start") & filters.private)
 async def start(_, msg):
     await msg.reply_photo(
-            photo=NETWORK_IMG,
+            photo=START_IMG,
             caption=START_MSG.format(msg.from_user.first_name, NETWORK_NAME),
             reply_markup=InlineKeyboardMarkup (buttons)
             )
