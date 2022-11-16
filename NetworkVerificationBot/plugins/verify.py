@@ -22,8 +22,7 @@ async def verify(_,msg):
       reply_markup=InlineKeyboardMarkup(VERIFY_BUTTONS)
       )
 
-@app.on_callback_query()
-async def _callback((bot: app, callback_query: CallbackQuery):
-    query = callback_query.data.lower()  
-    if query == "yes_verify":
-        await bot.edit_message_text("hii")
+@app.on_message(filters.regex("yes_verify"))
+async def yos(_, CallbackQuery):
+    query=CallbackQuery.message
+    await query.edit_text("hii")
