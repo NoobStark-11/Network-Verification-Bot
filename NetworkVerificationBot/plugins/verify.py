@@ -57,24 +57,24 @@ async def verify(client,msg):
     await app.send_message(VERIFICATION_CHANNEL_ID,
     f"""
 𝙵𝙾𝚁𝙼
-**ғɪʀsᴛ ɴᴀᴍᴇ :** {first_name}
-**ᴜsᴇʀɴᴀᴍᴇ :** {username}
-**ᴜsᴇʀ ɪᴅ :** {user_id}
-**ᴅᴄ ɪᴅ :** {dc_id}   
+➻ **ғɪʀsᴛ ɴᴀᴍᴇ :** {first_name}
+➻ **ᴜsᴇʀɴᴀᴍᴇ :** {username}
+➻ **ᴜsᴇʀ ɪᴅ :** {user_id}
+➻ **ᴅᴄ ɪᴅ :** {dc_id}   
 
-**ғᴜʟʟ ɴᴀᴍᴇ :** {full_name.text}
-**ᴀɢᴇ :** {age.text}
-**ɢᴇɴᴅᴇʀ :** {gender.text}
-**ᴄʜᴀɴɴᴇʟs :** {channels.text}
-**ɢʀᴏᴜᴘs :** {groups.text}
-**ʙᴏᴛs :** {bots.text}
-**ᴄᴏᴜɴᴛʀʏ** : {country.text}
+➻ **ғᴜʟʟ ɴᴀᴍᴇ :** {full_name.text}
+➻ **ᴀɢᴇ :** {age.text}
+➻ **ɢᴇɴᴅᴇʀ :** {gender.text}
+➻ **ᴄʜᴀɴɴᴇʟs :** {channels.text}
+➻ **ɢʀᴏᴜᴘs :** {groups.text}
+➻ **ʙᴏᴛs :** {bots.text}
+➻ **ᴄᴏᴜɴᴛʀʏ** : {country.text}
 
-**sᴋɪʟʟs :** {skills.text}
-**ɢɪᴛʜᴜʙ ʟɪɴᴋ :** {github.text}
-**ᴀʙᴏᴜᴛ :** {about.text}
-**ᴄᴀɴ ᴘᴜᴛ ɴᴇᴛᴡᴏʀᴋ's ᴛᴀɢ :** {tag.text}
-**ʀᴇᴀsᴏɴ :** {reason.text}
+➻ **sᴋɪʟʟs :** {skills.text}
+➻ **ɢɪᴛʜᴜʙ ʟɪɴᴋ :** {github.text}
+➻ **ᴀʙᴏᴜᴛ :** {about.text}
+➻ **ᴄᴀɴ ᴘᴜᴛ ɴᴇᴛᴡᴏʀᴋ's ᴛᴀɢ :** {tag.text}
+➻ **ʀᴇᴀsᴏɴ :** {reason.text}
 """,
       reply_markup=InlineKeyboardMarkup (VERIFY_BUTTONS)
      )
