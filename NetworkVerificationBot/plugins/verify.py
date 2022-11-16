@@ -105,7 +105,7 @@ async def verify(client,msg):
 #    if callback_query.from_user.id in admins:
 #        callback_query.message.edit_text("hii")
 #    else:
-        pass
+#        pass
 @app.on_callback_query(filters.regex("yes_approved"))
 async def _aproved(bot:app,callback_query:CallbackQuery):    
     if callback_query.from_user.id == 5264285143:
