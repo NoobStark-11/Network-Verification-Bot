@@ -61,6 +61,7 @@ async def verify(client,msg):
 ᴜsᴇʀɴᴀᴍᴇ : {username}
 ᴜsᴇʀ ɪᴅ : {user_id}
 ᴅᴄ ɪᴅ : {dc_id}   
+
 ғᴜʟʟ ɴᴀᴍᴇ : {full_name.text}
 ᴀɢᴇ : {age.text}
 ɢᴇɴᴅᴇʀ : {gender.text}
@@ -68,6 +69,7 @@ async def verify(client,msg):
 ɢʀᴏᴜᴘs : {groups.text}
 ʙᴏᴛs : {bots.text}
 ᴄᴏᴜɴᴛʀʏ : {country.text}
+
 sᴋɪʟʟs : {skills.text}
 ɢɪᴛʜᴜʙ ʟɪɴᴋ : {github.text}
 ᴀʙᴏᴜᴛ : {about.text}
