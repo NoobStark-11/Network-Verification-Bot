@@ -35,7 +35,10 @@ async def verify(_,msg):
 @app.on_callback_query(filters.regex("yes_verify"))
 async def yos(_, CallbackQuery):
     query = CallbackQuery.message
-    await query.edit_text("click on /continue to proceed")
+    await query.edit_text("""
+    ᴜsᴇ /continue ᴛᴏ ᴘʀᴏᴄᴇᴇᴅ
+ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ɪᴛ, ᴡʜᴇɴ ʏᴏᴜʀ ғᴏʀ ᴡɪʟʟ ʙᴇ ғɪʟʟᴇᴅ ɪ ᴡɪʟʟ ᴅɪʀᴇᴄᴛʟʏ sᴇɴᴅ ɪᴛ ɪɴ ᴍʏ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ.
+    """)
         
       
 @app.on_callback_query(filters.regex("no_verify"))
