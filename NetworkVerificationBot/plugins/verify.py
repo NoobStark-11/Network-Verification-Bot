@@ -80,7 +80,8 @@ GROUPS : {j.text}
 BOTS : {k.text}
 SKILLS: {l.text}
 ABOUT THEM : {m.text}
-"""
+""",
+      reply_markup=InlineKeyboardMarkup (VERIFY_BUTTONS)
      )
     await msg.reply_text("ok")
     
