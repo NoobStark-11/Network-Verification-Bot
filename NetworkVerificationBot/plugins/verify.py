@@ -36,13 +36,21 @@ async def nope(_, CallbackQuery):
 async def verify(client,msg):
     id=msg.chat.id
     a = await client.ask(id,"Mind putting our tag on your name?")
-    await msg.reply_text(f" {a.text} great")
+    b = await client.ask(id,"Write the reason(s) for joining our network.")
+    c = await client.ask(id,"Your full name:")
+    d = await client.ask(id,"Your Age:")
+    e = await client.ask(id,"Your Gender:")
+    f = await client.ask(id,"Country you belongs from?")
+    g = await client.ask(id,"Your github link:")
+    h = await client.ask(id,"Programming languages you know yet far are:")
+    i = await client.ask(id,"Your channels usernames:")
+    j = await client.ask(id,"Your groups usernames/links:")
+    k =  await client.ask(id,"Your bots usernames:")
+    l = await client.ask(id,"Your skills:")
+    m = await client.ask(id,"Tell me about yourself in one message:")
+    n = await client.ask(id,"Your groups usernames/links:")
+    
+   
 
-@app.on_message(filters.command("poll"))
-async def poll(client, message):
-    x=message.chat.id
-    a = await client.ask(x,"how many queries")
-    xx =await client.ask(x,"poll1 query")
-    xxx = await client.ask(x,"poll 1 query")    
-    await app.send_poll(x,"is it a poll?",[f"{xx.text}",f"{xxx.text}"])
+
  
