@@ -106,6 +106,7 @@ async def verify(client,msg):
 #        callback_query.message.edit_text("hii")
 #    else:
 #        pass
+
 @app.on_callback_query(filters.regex("yes_approved"))
 async def _aproved(bot:app,callback_query:CallbackQuery):    
     if callback_query.from_user.id == 5264285143:
@@ -116,6 +117,6 @@ async def _aproved(bot:app,callback_query:CallbackQuery):
 @app.on_callback_query(filters.regex("no_approved"))
 async def _aproved(bot:app,callback_query:CallbackQuery):    
     if callback_query.from_user.id == 5264285143:
-        await bot.send_message(-1001673903836,"user has been unapproved")    
+        await bot.send_message(-1001673903836,"a new user has been unapproved")    
     else:
         pass         
