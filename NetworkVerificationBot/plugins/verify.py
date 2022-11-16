@@ -1,5 +1,5 @@
 import os
-from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID
+from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID, NETWORK_IMG
 from pyrogram import filters 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
@@ -59,9 +59,8 @@ async def verify(client,msg):
     k = await client.ask(id,"Your bots usernames:")
     l = await client.ask(id,"Your skills:")
     m = await client.ask(id,"Tell me about yourself in one message:")
-    await app.send_message(VERIFICATION_CHANNEL_ID,f"hii")
-    await msg.reply_photo(photo=media, 
-       caption=f"""
+    await app.send_photo(VERIFICATION_CHANNEL_ID,NETWORK_IMG, 
+    caption=f"""
 FIRST NAME: {first_name}
 USERNAME: {username}
 ID: {user_id}
@@ -81,9 +80,10 @@ GROUPS : {j.text}
 BOTS : {k.text}
 SKILLS: {l.text}
 ABOUT THEM : {m.text}
-""",
-       )
-    os.remove(photo)
+"""
+     )
+    await msg.reply_text("ok")
+    
 
 
  
