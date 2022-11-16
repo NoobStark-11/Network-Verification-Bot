@@ -38,3 +38,9 @@ async def yos(_, CallbackQuery):
 async def nope(_, CallbackQuery):
     query=CallbackQuery.message
     await query.edit_text("please consider to come back again")
+
+@app.on_callback_query(filters.regex("yes_tag"))
+async def yos(_, CallbackQuery):
+    query = CallbackQuery.message
+    await query.edit_text("great")
+    
