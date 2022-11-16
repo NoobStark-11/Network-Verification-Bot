@@ -42,7 +42,7 @@ async def nope(_, CallbackQuery):
 @app.on_callback_query(filters.regex("yes_tag"))
 async def yos(_, CallbackQuery):
     query = CallbackQuery.message
-    await query.edit_text("great\nclick /proceed to continue the verification"")
+    await query.edit_text("great\nclick /proceed to continue the verification")
 
 @app.on_callback_query(filters.regex("no_tag"))
 async def nope(_, CallbackQuery):
