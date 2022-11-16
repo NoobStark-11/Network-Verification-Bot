@@ -1,4 +1,4 @@
-from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID,START_IMG,TOS_LINK
+from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID,START_IMG,TOS_LINK,APPROVED_CHANNEL_ID,ADMINS
 from pyrogram import filters ,enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
@@ -109,14 +109,14 @@ async def verify(client,msg):
 
 @app.on_callback_query(filters.regex("yes_approved"))
 async def _aproved(bot:app,callback_query:CallbackQuery):    
-    if callback_query.from_user.id == 5264285143:
-        await bot.send_message(-1001673903836,"a new user has been approved")    
+    if callback_query.from_user.id == ADMINS:
+        await bot.send_message(APPROVED_CHANNEL_ID,"a new user has been approved")    
     else:
         pass        
 
 @app.on_callback_query(filters.regex("no_approved"))
 async def _aproved(bot:app,callback_query:CallbackQuery):    
-    if callback_query.from_user.id == 5264285143:
-        await bot.send_message(-1001673903836,"a new user has been unapproved")    
+    if callback_query.from_user.id == ADMINS:
+        await bot.send_message(APPROVED_CHANNEL_ID,"a new user has been unapproved")    
     else:
         pass         
