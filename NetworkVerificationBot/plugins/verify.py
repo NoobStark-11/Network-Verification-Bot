@@ -14,7 +14,7 @@ VERIFY_BUTTONS= [
           InlineKeyboardButton (text="no,i decline",callback_data="no_verify")        
          ],
       ]
-VERIFICATION_FORM="""
+VERIFICATION_FORM=f"""
 FIRST NAME: {first_name}
 USERNAME: {username}
 ID: {user_id}
