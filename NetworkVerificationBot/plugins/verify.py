@@ -1,5 +1,5 @@
 from NetworkVerificationBot import app
-from Pyrogram import filters 
+from pyrogram import filters 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 VERIFY_MSG="""
