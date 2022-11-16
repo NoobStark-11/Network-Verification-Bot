@@ -49,7 +49,7 @@ async def verify(client,msg):
     l = await client.ask(id,"Your skills:")
     m = await client.ask(id,"Tell me about yourself in one message:")
     
-@app.on_message(filters.command("proceed))
+@app.on_message(filters.command("proceed"))
 async def proceed (_,msg):
      await msg.reply_text(f"{a.text}")  
 
