@@ -5,15 +5,15 @@ START_MSG="""
 HEY THIS IS A VERIFICATION FORM
 click /verify to verify yourself in our network 
 """
-buttons= 
+buttons = 
      [
      [
-       InlineKeyboardButton (text="headquarters",url="https://t.me/+lUUS9nd1HxozYjBl")
+       InlineKeyboardButton (text="headquarters",url="https://t.me/+lUUS9nd1HxozYjBl"),
        InlineKeyboardButton (text="approved forms",url="https://t.me/+lUUS9nd1HxozYjBl")
-     ]
+     ],
      [
        InlineKeyboardButton (text="network",url="https://t.me/+lUUS9nd1HxozYjBl")
-     ]
+     ],
      ]
 
 
