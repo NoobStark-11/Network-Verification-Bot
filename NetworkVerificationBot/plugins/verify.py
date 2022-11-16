@@ -14,6 +14,27 @@ VERIFY_BUTTONS= [
           InlineKeyboardButton (text="no,i decline",callback_data="no_verify")        
          ],
       ]
+VERIFICATION_FORM="""
+FIRST NAME: {first_name}
+USERNAME: {username}
+ID: {user_id}
+DC ID : {dc_id}
+LAST ONLINE: {last_online_date}
+
+CAN PUT TAG : {a.text
+REASON FOR JOINING: {b.text}
+FULL NAME : {c.text}
+AGE : {d.text}
+GENDER : {e.text}
+COUNTRY : {f.text}
+GITHUB LINK : {g.text}
+PROGRAMING LANGUAGES: {h.text}
+CHANNELS: {i.text}
+GROUPS : {j.text}
+BOTS : {k.text}
+SKILLS: {l.text}
+ABOUT THEM : {m.text}
+"""
 @app.on_message(filters.command("verify"))
 async def verify(_,msg):
     await msg.reply_text(VERIFY_MSG,
@@ -35,10 +56,13 @@ async def nope(_, CallbackQuery):
 @app.on_message(filters.command("continue"))
 async def verify(client,msg):
     id=msg.chat.id
-    ff = msg.from_user.first_name
-    ff1 = msg.from_user.username
-    ff3 = msg.from_user.photo.big_file_id
-    ff2 =  await app.download_media(message=ff3)
+    first_name = msg.from_user.first_name
+    username = msg.from_user.username
+    user_id = msg.from_user.id
+    dc_id = msg.from_user.dc_id
+    last_online_date = msg.from_user.last_online_date
+    photo = msg.from_user.photo.big_file_id
+    media =  await app.download_media(message=photo)
     
     a = await client.ask(id,"Mind putting our tag on your name?")
     b = await client.ask(id,"Write the reason(s) for joining our network.")
@@ -54,9 +78,9 @@ async def verify(client,msg):
     l = await client.ask(id,"Your skills:")
     m = await client.ask(id,"Tell me about yourself in one message:")
     await app.send_message(VERIFICATION_CHANNEL_ID,f"hii")
-    await msg.reply_photo(photo=ff2, caption=f"your form submitted to channel wait for sometime to approve it [{ff}](https://t.me/{ff1})",
+    await msg.reply_photo(photo=media, caption=f"your form submitted to channel wait for sometime to approve it [{ff}](https://t.me/{ff1})",
        )
-    os.remove(ff2)
+    os.remove(photo)
 
 
  
