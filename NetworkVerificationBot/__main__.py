@@ -1,3 +1,4 @@
+from pyrogram import filters
 from NetworkVerificationBot import app, NETWORK_IMG
 
 START_MSG="""
