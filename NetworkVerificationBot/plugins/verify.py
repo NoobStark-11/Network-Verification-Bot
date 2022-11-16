@@ -61,25 +61,30 @@ async def verify(client,msg):
     m = await client.ask(id,"Tell me about yourself in one message:")
     await app.send_photo(VERIFICATION_CHANNEL_ID,NETWORK_IMG, 
     caption=f"""
-FIRST NAME: {first_name}
-USERNAME: {username}
-ID: {user_id}
-DC ID : {dc_id}
-LAST ONLINE: {last_online_date}
-
-CAN PUT TAG : {a.text}
-REASON FOR JOINING: {b.text}
-FULL NAME : {c.text}
-AGE : {d.text}
-GENDER : {e.text}
-COUNTRY : {f.text}
-GITHUB LINK : {g.text}
-PROGRAMING LANGUAGES: {h.text}
-CHANNELS: {i.text}
-GROUPS : {j.text}
-BOTS : {k.text}
-SKILLS: {l.text}
-ABOUT THEM : {m.text}
+╔════❰ 𝚅𝙴𝚁𝙸𝙵𝙸𝙲𝙰𝚃𝙸𝙾𝙽 𝙵𝙾𝚁𝙼 ❱═❍
+║╭━━━━━━━━━━━━━━━➣
+║┣⪼ **ғɪʀsᴛ ɴᴀᴍᴇ :**
+║┣⪼ ᴜsᴇʀɴᴀᴍᴇ
+║┣⪼ ᴜsᴇʀ ɪᴅ :
+║┣⪼ ᴅᴄ ɪᴅ :
+║╰━━━━━━━━━━━━━━━➣   
+   ╭━━━━━━━━━━━━━━━➣
+║┣⪼ ғᴜʟʟ ɴᴀᴍᴇ :
+║┣⪼ ᴀɢᴇ :
+║┣⪼ ɢᴇɴᴅᴇʀ :
+║┣⪼ ᴄʜᴀɴɴᴇʟs :
+║┣⪼ ɢʀᴏᴜᴘs :
+║┣⪼ ʙᴏᴛs :
+║┣⪼ ᴄᴏᴜɴᴛʀʏ :
+║╰━━━━━━━━━━━━━━━➣
+   ╭━━━━━━━━━━━━━━━➣
+║┣⪼ sᴋɪʟʟs :
+║┣⪼ ɢɪᴛʜᴜʙ ʟɪɴᴋ :
+║┣⪼ ᴀʙᴏᴜᴛ : 
+║┣⪼ ᴄᴀɴ ᴘᴜᴛ ɴᴇᴛᴡᴏʀᴋ's ᴛᴀɢ :
+║┣⪼ ʀᴇᴀsᴏɴ :
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍
 """,
       reply_markup=InlineKeyboardMarkup (VERIFY_BUTTONS)
      )
