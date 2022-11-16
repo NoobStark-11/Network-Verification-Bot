@@ -96,7 +96,7 @@ async def verify(client,msg):
 ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ.
      """)
     
-@app.on_callback_query(filters.regex("yes_approved")
+@app.on_callback_query(filters.regex("yes_approved"))
 async def _aproved(bot:app,callback_query:CallbackQuery):
     admins=[]
     for m in bot.get_chat_members(
