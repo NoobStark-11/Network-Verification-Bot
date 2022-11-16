@@ -8,7 +8,7 @@ HEY THIS IS A VERIFICATION FORM
 async def start(_, msg):
     await msg.reply_photo(
             photo="NETWORK_IMG",
-            caption=START_MSG"
+            caption=START_MSG
             )
 if __name__ == "__main__" :
     app.run()
