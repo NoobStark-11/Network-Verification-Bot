@@ -61,18 +61,18 @@ async def verify(client,msg):
 ᴜsᴇʀɴᴀᴍᴇ :{username}
 ᴜsᴇʀ ɪᴅ :{user_id}
 ᴅᴄ ɪᴅ :{dc_id}   
-ғᴜʟʟ ɴᴀᴍᴇ :{full_name}
-ᴀɢᴇ :{age}
-ɢᴇɴᴅᴇʀ :{gender}
-ᴄʜᴀɴɴᴇʟs :{channels}
-ɢʀᴏᴜᴘs :{groups}
-ʙᴏᴛs :{bots}
-ᴄᴏᴜɴᴛʀʏ :{country}
-sᴋɪʟʟs :{skills}
-ɢɪᴛʜᴜʙ ʟɪɴᴋ :{github}
-ᴀʙᴏᴜᴛ :{about}
-ᴄᴀɴ ᴘᴜᴛ ɴᴇᴛᴡᴏʀᴋ's ᴛᴀɢ :{tag}
-ʀᴇᴀsᴏɴ :{reason}
+ғᴜʟʟ ɴᴀᴍᴇ :{full_name.text}
+ᴀɢᴇ :{age.text}
+ɢᴇɴᴅᴇʀ :{gender.text}
+ᴄʜᴀɴɴᴇʟs :{channels.text}
+ɢʀᴏᴜᴘs :{groups.text}
+ʙᴏᴛs :{bots.text}
+ᴄᴏᴜɴᴛʀʏ :{country.text}
+sᴋɪʟʟs :{skills.text}
+ɢɪᴛʜᴜʙ ʟɪɴᴋ :{github.text}
+ᴀʙᴏᴜᴛ :{about.text}
+ᴄᴀɴ ᴘᴜᴛ ɴᴇᴛᴡᴏʀᴋ's ᴛᴀɢ :{tag.text}
+ʀᴇᴀsᴏɴ :{reason.text}
 """,
       reply_markup=InlineKeyboardMarkup (VERIFY_BUTTONS)
      )
