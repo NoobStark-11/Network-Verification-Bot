@@ -115,7 +115,8 @@ async def _aproved(bot:app,callback_query:CallbackQuery):
         pass        
 
 @app.on_callback_query(filters.regex("no_approved"))
-async def _aproved(bot:app,callback_query:CallbackQuery):    
+async def _aproved(bot:app,callback_query:CallbackQuery):  
+    username = callback_query.from_user.username  
     if callback_query.from_user.id == ADMINS:
         await bot.send_message(APPROVED_CHANNEL_ID,"a new user has been unapproved")    
     else:
