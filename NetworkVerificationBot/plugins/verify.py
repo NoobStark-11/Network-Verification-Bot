@@ -51,7 +51,7 @@ async def verify(client,msg):
     
 @app.on_message(filters.command("proceed))
 async def proceed (_,msg):
-     await msg.reply_text(f"{a.text})  
+     await msg.reply_text(f"{a.text}")  
 
 
  
