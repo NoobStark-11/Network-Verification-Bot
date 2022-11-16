@@ -23,7 +23,7 @@ async def verify(_,msg):
       )
 
 @app.on_callback_query()
-async def _callback(_,callback_query: CallbackQuery):
-    query= callback_query.data
+async def _callback(_,CallbackQuery):
+    query = CallbackQuery.message 
     if query == "yes_verify":
         await query.edit_text("hii")
