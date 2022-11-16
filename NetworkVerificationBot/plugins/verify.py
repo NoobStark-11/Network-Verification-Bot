@@ -30,11 +30,13 @@ async def yos(_, CallbackQuery):
 async def nope(_, CallbackQuery):
     query=CallbackQuery.message
     await query.edit_text("please consider to come back again")
+  
 
 @app.on_message(filters.command("continue"))
 async def verify(client,msg):
     id=msg.chat.id
     a = await client.ask(id,"Mind putting our tag on your name?")
+    await msg.reply_text(f" {a.text} great")
 
 @app.on_message(filters.command("poll"))
 async def poll(client, message):
@@ -42,3 +44,5 @@ async def poll(client, message):
     a = await client.ask(x,"how many queries")
     xx =await client.ask(x,"poll1 query")
     xxx = await client.ask(x,"poll 1 query")    
+    await app.send_poll(x,"is it a poll?",[f"{xx.text}",f"{xxx.text}"])
+ 
