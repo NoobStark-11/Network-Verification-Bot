@@ -1,5 +1,5 @@
 from pyrogram import filters
-from NetworkVerificationBot import app, NETWORK_IMG,NETWORK_NAME,HQ_USERNAME, PUBLIC_APPROVED_CHANNEL_USERNAME
+from NetworkVerificationBot import app, NETWORK_IMG,NETWORK_NAME,HQ_USERNAME, PUBLIC_APPROVED_CHANNEL_USERNAME,NETWORK_USERNAME
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 
 START_MSG="""
@@ -11,11 +11,11 @@ START_MSG="""
 
 buttons = [
      [
-       InlineKeyboardButton (text="ʜᴇᴀᴅǫᴜᴀᴛᴇʀs",url="https://t.me/+lUUS9nd1HxozYjBl"),
-       InlineKeyboardButton (text="ᴀᴘᴘʀᴏᴠᴇᴅ ғᴏʀᴍs",url="https://t.me/+lUUS9nd1HxozYjBl")
+       InlineKeyboardButton (text="ʜᴇᴀᴅǫᴜᴀᴛᴇʀs",url=f"https://t.me/{HQ_USERNAME}"),
+       InlineKeyboardButton (text="ᴀᴘᴘʀᴏᴠᴇᴅ ғᴏʀᴍs",url=f"https://t.me/{PUBLIC_APPROVED_CHANNEL_USERNAME,NETWORK_USERNAME}")
      ],
      [
-       InlineKeyboardButton (text="ɴᴇᴛᴡᴏʀᴋ",url="https://t.me/+lUUS9nd1HxozYjBl")
+       InlineKeyboardButton (text="ɴᴇᴛᴡᴏʀᴋ",url=f"https://t.me/{NETWORK_USERNAME}")
      ],
      ]
 
