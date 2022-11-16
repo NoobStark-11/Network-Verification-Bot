@@ -12,7 +12,7 @@ START_MSG="""
 buttons = [
      [
        InlineKeyboardButton (text="ʜᴇᴀᴅǫᴜᴀᴛᴇʀs",url=f"https://t.me/{HQ_USERNAME}"),
-       InlineKeyboardButton (text="ᴀᴘᴘʀᴏᴠᴇᴅ ғᴏʀᴍs",url=f"https://t.me/{PUBLIC_APPROVED_CHANNEL_USERNAME,NETWORK_USERNAME}")
+       InlineKeyboardButton (text="ᴀᴘᴘʀᴏᴠᴇᴅ ғᴏʀᴍs",url=f"https://t.me/{PUBLIC_APPROVED_CHANNEL_USERNAME}")
      ],
      [
        InlineKeyboardButton (text="ɴᴇᴛᴡᴏʀᴋ",url=f"https://t.me/{NETWORK_USERNAME}")
