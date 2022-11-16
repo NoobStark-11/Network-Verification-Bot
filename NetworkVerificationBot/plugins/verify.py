@@ -23,33 +23,17 @@ async def verify(_,msg):
 @app.on_callback_query(filters.regex("yes_verify"))
 async def yos(_, CallbackQuery):
     query = CallbackQuery.message
-    await query.edit_text("Mind putting our tag on your name?",
-        reply_markup=InlineKeyboardMarkup (
-         [
-         [
-          InlineKeyboardButton (text="yes i can",callback_data="yes_tag"),
-          InlineKeyboardButton (text="no i can't ",callback_data="no_tag")
-         ],
-         ],
-        ),
-      )
+    await query.edit_text("click on /continue to proceed")
+        
       
-
 @app.on_callback_query(filters.regex("no_verify"))
 async def nope(_, CallbackQuery):
     query=CallbackQuery.message
     await query.edit_text("please consider to come back again")
 
-@app.on_callback_query(filters.regex("yes_tag"))
-async def yos(_, CallbackQuery):
-    query = CallbackQuery.message
-    a = await client.ask(message.chat.id,"how many queries")
-
-@app.on_callback_query(filters.regex("no_tag"))
-async def nope(_, CallbackQuery):
-    query=CallbackQuery.message
-    await query.edit_text("Fine! but if you could, that would be a great help. \n click /proceed to continue the verification")
-
-
+@app.on_message(filters.command("continue"))
+async def verify(_,msg):
+    id=msg.chat.id
+    a = await client.ask(id,"Mind putting our tag on your name?")
 
     
