@@ -43,7 +43,7 @@ async def yos(_, CallbackQuery):
 @app.on_callback_query(filters.regex("no_verify"))
 async def nope(_, CallbackQuery):
     query=CallbackQuery.message
-    await query.edit_text("ɪᴛs sᴏ sᴀᴅ ғᴏʀ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴛ ᴛᴏ ɴᴏʏ ʜᴀᴠᴇ ᴀ ᴅɪᴀᴍᴏɴᴅ ʟɪᴋᴇ ʏᴏᴜ.ʙᴜᴛ ɪғ ᴇᴠᴇʀ ᴄʜᴀɴɢᴇ ʏᴏᴜʀ ᴍɪɴᴅ ᴛʜᴇɴ ʟᴇᴍᴍᴇ ᴋɴᴏᴡ.")
+    await query.edit_text("ɪᴛs sᴏ sᴀᴅ ғᴏʀ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴛ ᴛᴏ ɴᴏt ʜᴀᴠᴇ ᴀ ᴅɪᴀᴍᴏɴᴅ ʟɪᴋᴇ ʏᴏᴜ.ʙᴜᴛ ɪғ ᴇᴠᴇʀ ᴄʜᴀɴɢᴇ ʏᴏᴜʀ ᴍɪɴᴅ ᴛʜᴇɴ ʟᴇᴍᴍᴇ ᴋɴᴏᴡ.")
   
 
 @app.on_message(filters.command("continue"))
