@@ -32,7 +32,7 @@ async def nope(_, CallbackQuery):
     await query.edit_text("please consider to come back again")
 
 @app.on_message(filters.command("continue"))
-async def verify(_,msg):
+async def verify(client,msg):
     id=msg.chat.id
     a = await client.ask(id,"Mind putting our tag on your name?")
 
