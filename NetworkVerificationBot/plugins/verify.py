@@ -14,6 +14,12 @@ VERIFY_BUTTONS= [
           InlineKeyboardButton (text="no,i decline",callback_data="no_verify")        
          ],
       ]
+first_name = msg.from_user.first_name
+username = msg.from_user.username
+user_id = msg.from_user.id
+dc_id = msg.from_user.dc_id
+last_online_date = msg.from_user.last_online_date
+
 VERIFICATION_FORM=f"""
 FIRST NAME: {first_name}
 USERNAME: {username}
@@ -55,12 +61,7 @@ async def nope(_, CallbackQuery):
 
 @app.on_message(filters.command("continue"))
 async def verify(client,msg):
-    id=msg.chat.id
-    first_name = msg.from_user.first_name
-    username = msg.from_user.username
-    user_id = msg.from_user.id
-    dc_id = msg.from_user.dc_id
-    last_online_date = msg.from_user.last_online_date
+    id=msg.chat.id    
     photo = msg.from_user.photo.big_file_id
     media =  await app.download_media(message=photo)
     
