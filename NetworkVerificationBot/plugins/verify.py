@@ -35,9 +35,9 @@ async def nope(_, CallbackQuery):
 @app.on_message(filters.command("continue"))
 async def verify(client,msg):
     id=msg.chat.id
-    ff = msg.from_user
-    user = await app.get_users(ff)
-    id1=user.id
+    ff = msg.from_user.first_name
+    
+    
     a = await client.ask(id,"Mind putting our tag on your name?")
     b = await client.ask(id,"Write the reason(s) for joining our network.")
     c = await client.ask(id,"Your full name:")
@@ -52,7 +52,7 @@ async def verify(client,msg):
     l = await client.ask(id,"Your skills:")
     m = await client.ask(id,"Tell me about yourself in one message:")
     await app.send_message(VERIFICATION_CHANNEL_ID,f"hii")
-    await msg.reply_text(f"your form submitted to channel wait for sometime to approve it {id1}")
+    await msg.reply_text(f"your form submitted to channel wait for sometime to approve it {ff}")
 
 
  
