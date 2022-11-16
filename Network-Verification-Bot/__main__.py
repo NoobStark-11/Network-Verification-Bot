@@ -10,3 +10,5 @@ async def start(_, msg):
             photo="NETWORK_IMG",
             caption=START_MSG"
             )
+if __name__ == "__main__" :
+    app.run()
