@@ -1,4 +1,4 @@
-
+import os
 from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID
 from pyrogram import filters 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
@@ -37,7 +37,8 @@ async def verify(client,msg):
     id=msg.chat.id
     ff = msg.from_user.first_name
     ff1 = msg.from_user.username
-    
+    ff3 = msg.from_user.photo.big_file_id
+    ff2 =  await bot.download_media(message=ff3)
     
     a = await client.ask(id,"Mind putting our tag on your name?")
     b = await client.ask(id,"Write the reason(s) for joining our network.")
@@ -53,7 +54,9 @@ async def verify(client,msg):
     l = await client.ask(id,"Your skills:")
     m = await client.ask(id,"Tell me about yourself in one message:")
     await app.send_message(VERIFICATION_CHANNEL_ID,f"hii")
-    await msg.reply_text(f"your form submitted to channel wait for sometime to approve it [{ff}](https://t.me/{ff1})")
+    await msg.reply_photo(photo=ff2, caption=f"your form submitted to channel wait for sometime to approve it [{ff}](https://t.me/{ff1})",
+       disable_web_page_preview=True)
+    os.remove(ff2)
 
 
  
