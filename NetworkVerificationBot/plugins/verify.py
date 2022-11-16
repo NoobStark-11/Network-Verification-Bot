@@ -1,5 +1,5 @@
 
-from NetworkVerificationBot import app
+from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID
 from pyrogram import filters 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
@@ -45,10 +45,10 @@ async def verify(client,msg):
     h = await client.ask(id,"Programming languages you know yet far are:")
     i = await client.ask(id,"Your channels usernames:")
     j = await client.ask(id,"Your groups usernames/links:")
-    k =  await client.ask(id,"Your bots usernames:")
+    k = await client.ask(id,"Your bots usernames:")
     l = await client.ask(id,"Your skills:")
     m = await client.ask(id,"Tell me about yourself in one message:")
-    await msg.reply_text(f"{a.text}")
+    await app.send_message(VERIFICATION_CHANNEL_ID,f"{a.text}")
 
 
  
