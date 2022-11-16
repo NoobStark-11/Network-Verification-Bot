@@ -1,11 +1,10 @@
 from NetworkVerificationBot import app
 from pyrogram import filters 
-from pyrogram.types import 
-(
-InlineKeyboardButton, 
-InlineKeyboardMarkup,
-CallbackQuery 
-)
+from pyrogram.types import (
+    InlineKeyboardButton, 
+    InlineKeyboardMarkup,
+    CallbackQuery 
+    )
 VERIFY_MSG="""
 Hello, In order to verify yourself, Are you accepting our Tos (Terms of Service)?
 """
