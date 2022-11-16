@@ -5,7 +5,7 @@ START_MSG="""
 HEY THIS IS A VERIFICATION FORM
 """
 
-@app.on_message(filters.command("start"))
+@app.on_message(filters.command("start") & filters.private)
 async def start(_, msg):
     await msg.reply_photo(
             photo=NETWORK_IMG,
