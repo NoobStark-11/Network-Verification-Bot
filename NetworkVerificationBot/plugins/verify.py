@@ -1,5 +1,5 @@
 import os
-from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID, NETWORK_IMG
+from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID,START_IMG as NETWORK_IMG
 from pyrogram import filters 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
