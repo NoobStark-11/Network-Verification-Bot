@@ -64,7 +64,7 @@
             "description": "give the telegraph link of your network logo ",
             "required": false
         },
-       "HQ_ID": {
+        "HQ_ID": {
             "description": "your headquarter's integer id",
             "required": true
         }
