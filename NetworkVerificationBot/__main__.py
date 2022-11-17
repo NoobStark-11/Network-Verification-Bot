@@ -22,7 +22,10 @@ buttons = [
 
 @app.on_message(filters.command("start") & filters.private)
 async def start(_, msg):
+    members=[]
     mem = await app.get_chat_members(-1001547036942,msg.from_user.id)
+    for i in mem:
+        members.append(i.from_user.id)
     if  msg.from_user.id not in mem:
         await msg.reply_text("join our chat first", reply_markup=InlineKeyboardMarkup (buttons))    
     else:
