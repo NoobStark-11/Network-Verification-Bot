@@ -13,8 +13,9 @@ class Config:
     APPROVED_CHANNEL_USERNAME = "ok"
     VERIFICATION_CHANNEL_ID = -1001715350671
     APPROVED_CHANNEL_ID = -1001673903836
-    ADMINS= 5264285143
+  #  ADMINS= 5264285143
    # ADMINS = list(
-  #  map(int,getenv("ADMINS", "5264285143,1937701729").split(",")))
+  #  map(int,getenv("ADMINS", "5264285143,").split(",")))
   #  ADMINS = set(int(x) for x in os.environ.get("DRAGONS", "5264285143 1937701729").split())
+    ADMINS = list(int(i) for i in os.environ.get("AUTH_USERS", "5264285143 1937701729").split(" ")) if os.environ.get("AUTH_USERS", "") else []
     NETWORK_IMG="https://telegra.ph/file/2c7a09bff109deec3e305.jpg"
