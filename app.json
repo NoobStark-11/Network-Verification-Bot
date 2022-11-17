@@ -11,9 +11,14 @@
     ],
 
     "repository": "https://github.com/NoobStark-11/Network-Verification-Bot",
-    "stack": "heroku-20",
-    
-
+   "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],    
     "env": {
         "API_HASH": {
             "description": "Your API_HASH, Get it from https://my.telegram.org/"
@@ -65,24 +70,13 @@
             "required": true
         }
     },
-
-    "addons": [
-        {
-            "plan": "heroku-postgresql",
-            "options": {"version": "12"}
-        }
-    ],
-
-    "buildpacks": [{
-        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        },{
-        "url": "heroku/python"
-    }],
-
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
+    
+    "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
     }
+  ]
 }
