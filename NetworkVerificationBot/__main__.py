@@ -42,7 +42,7 @@ You must,
             )    
                 
     else:
-        await app.send_message(msg.from_user.id,"hey")        
+        pass        
 
 if __name__ == "__main__" :
     app.run()
