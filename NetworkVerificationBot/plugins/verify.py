@@ -117,7 +117,7 @@ async def verify(client,msg):
 @app.on_callback_query(filters.regex("yes_approved"))
 async def _aproved(bot:app,callback_query:CallbackQuery):    
     username = callback_query.from_user.username      
-    if callback_query.from_user.id == ADMINS:
+    if callback_query.from_user.id in ADMINS:
         await callback_query.message.edit_text(f"""
 **ᴀᴘᴘʀᴏᴠᴇᴅ** :
 
@@ -133,7 +133,7 @@ async def _aproved(bot:app,callback_query:CallbackQuery):
 @app.on_callback_query(filters.regex("no_approved"))
 async def _disaproved(bot:app,callback_query:CallbackQuery):  
     username = callback_query.from_user.username  
-    if callback_query.from_user.id == ADMINS:
+    if callback_query.from_user.id in ADMINS:
         await callback_query.message.edit_text(f"""
 
 **ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ** :
