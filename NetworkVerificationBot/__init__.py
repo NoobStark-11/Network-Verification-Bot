@@ -23,6 +23,7 @@ if ENV:
     NETWORK_IMG=str(os.environ.get("NETWORK_IMG",None))
     TOS_LINK=str(os.environ.get("TOS_LINK", None)) # terms and conditions of your network if not have any then just leave it
     VERIFICATION_CHANNEL_ID=int(os.environ.get("VERIFICATION_CHANNEL_ID",None))
+    ADMINS = list(int(i) for i in os.environ.get("ADMINS", " ").split(" ")
   
 else:
     API_ID=Config.API_ID
