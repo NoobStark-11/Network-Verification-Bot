@@ -16,6 +16,6 @@ class Config:
   #  ADMINS= 5264285143
    # ADMINS = list(
   #  map(int,getenv("ADMINS", "5264285143,").split(",")))
-  #  ADMINS = set(int(x) for x in os.environ.get("DRAGONS", "5264285143 1937701729").split())
-    ADMINS = list(int,os.environ.get("ADMINS", "5264285143 1937701729").split(" "))
+  #  ADMINS = set(intenviron.get("DRAGONS", "5264285143 1937701729").split())
+    ADMINS = list(int(x) for x in os.environ.get("ADMINS", "5264285143 1937701729").split(" "))
     NETWORK_IMG="https://telegra.ph/file/2c7a09bff109deec3e305.jpg"
