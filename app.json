@@ -18,72 +18,72 @@
          "plan": "heroku-postgresql"
       }
    ],
-    "env": {
-        "API_HASH": {
-            "description": "Your API_HASH, Get it from https://my.telegram.org/",
-            "required": true,
-            "value": "13600724"
-        },
-        "API_ID": {
-            "description": "Your API_ID, Get it from https://my.telegram.org/",
-            "required": true,
-            "value": "13600724"
-        },
-        "ADMINS": {
-            "description": "list of Auth user Id who can access bot without password and have rights to use admin commands",
-            "required": true,          
-            "value": "13600724"
-        },        
-        "TOKEN": {
-            "description": "Get it from @BotFather",
-            "required": true,            
-            "value": "13600724"
-        },       
-        "TOS_LINK": {
-            "description": "your network's terms and conditions link",
-            "required": true,            
-            "value": "13600724"
-        },
-        "VERIFICATION_CHANNEL_ID": {
-            "description": "your verification channel integer id where bot will send filled forms",
-            "required": true,           
-            "value": "13600724"
-        },
-        "VERIFICATION_CHANNEL_USERNAME": {
-            "description": "your verification channel username without @ where bot will send filled forms",
-            "required": true,
-            "value": "13600724"
-        },
-        "ENV": {
-            "description": "Set it to anything to enable configuration by environment variables.",
-            "value": "ANYTHING"
-        },
-        "NETWORK_NAME": {
-            "description": "your network name ",
-            "required": true,           
-            "value": "13600724"
-        },
-        "HQ_USERNAME": {
-            "description": "your headquarters username without @ .",
-            "required": false,            
-            "value": "13600724"
-        },
-        "NETWORK_USERNAME": {
-            "description": "your network's username without @ .",
-            "required": false,            
-            "value": "13600724"
-        },
-        "NETWORK_IMG": {
-            "description": "give the telegraph link of your network logo ",
-            "required": false,            
-            "value": "13600724"
-        },
-        "HQ_ID": {
-            "description": "your headquarter's integer id",
-            "required": true             
-            "value": "13600724"
-        }
-    },   
+   "env": {
+      "TOKEN": {
+         "description": "Your bot token. Can be obtained from https://telegram.dog/BotFather/",
+         "required": true,
+         "value": "YOUR BOT_TOKEN"
+      },
+      "API_ID": {
+         "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": "13600724"
+      },
+      "API_HASH": {
+         "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": "ee59fd28d0d065c6b7d105082c6a0ba0"
+      },
+      "TOS_LINK": {
+         "description": "Same as API_ID, BUT  2nd idi",
+         "required": true,
+         "value": "13600724"
+      },
+      "VERIFICATION_CHANNEL_ID": {
+         "description": "Same as API_HASH, but 2nd id",
+         "required": true,
+         "value": "ee59fd28d0d065c6b7d105082c6a0ba0"
+      },  
+      "VERIFICATION_CHANNEL_USERNAME": {
+         "description": "Your Postgres SQL DataBase URI, Get one from https://customer.elephantsql.com/login",
+         "required": true,
+         "value": "postgres://qszfsijv:y6sYqkEb8Z9lFGBmriG7AYjbSbgAJBVk@peanut.db.elephantsql.com/qszfsijv"
+      },  
+      "NETWORK_NAME": {
+         "description": "Your Postgres SQL DataBase URI, Get one from https://customer.elephantsql.com/login (DATABASE_URL)",
+         "required": true,
+         "value": "postgres://qszfsijv:y6sYqkEb8Z9lFGBmriG7AYjbSbgAJBVk@peanut.db.elephantsql.com/qszfsijv"
+      },
+      "HQ_USERNAME": {
+         "description": "Your one extra Mongo DataBase URI, Get one from mongodb.com",
+         "required": true,
+         "value": "mongodb+srv://EXONTESTMONGO:EXONTESTMONGO@cluster0.bviw7ic.mongodb.net/?retryWrites=true&w=majority"
+      }, 
+      "NETWORK_USERNAME": {
+         "description": "Your Redis URL, Get one from redislabs.com",
+         "required": true,
+         "value": "redis://Madharjoot:GuKhao123_@redis-12276.c275.us-east-1-4.ec2.cloud.redislabs.com:12276/Madharjoot"
+      }, 
+     "ADMINS": {
+         "description": "From:- https://www.remove.bg/",
+         "required": false,
+         "value": "LSdLgCceYz8vNqFgJVzrkDgR"
+      }, 
+      "NETWORK_IMG": {
+         "description": "Your Telegram User ID as an integer.",
+         "required": true,
+         "value": "1452219013"
+      },     
+      "ENV": {
+         "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
+         "value": "ANYTHING"
+      },      
+      "HQ_ID": {
+         "description": "The ID of the Group where the bot will spam with shitty errors and techy stuff",
+         "required": true,
+         "value": "-1001497222182"
+      }
+   },   
       "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-python"
