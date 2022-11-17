@@ -35,53 +35,53 @@
          "value": "ee59fd28d0d065c6b7d105082c6a0ba0"
       },
       "TOS_LINK": {
-         "description": "Same as API_ID, BUT  2nd idi",
+         "description": "your network's terms and conditions link",
          "required": true,
-         "value": "13600724"
+         "value": "https://t.me/StarkIndustry_21/15"
       },
       "VERIFICATION_CHANNEL_ID": {
-         "description": "Same as API_HASH, but 2nd id",
+         "description": "your verification channel integer id where bot will send filled forms",
          "required": true,
-         "value": "ee59fd28d0d065c6b7d105082c6a0ba0"
+         "value": "-1001868905939"
       },  
       "VERIFICATION_CHANNEL_USERNAME": {
-         "description": "Your Postgres SQL DataBase URI, Get one from https://customer.elephantsql.com/login",
+         "description": "your verification channel username without @ where bot will send filled forms",
          "required": true,
-         "value": "postgres://qszfsijv:y6sYqkEb8Z9lFGBmriG7AYjbSbgAJBVk@peanut.db.elephantsql.com/qszfsijv"
+         "value": "StarkIndustry_21"
       },  
       "NETWORK_NAME": {
-         "description": "Your Postgres SQL DataBase URI, Get one from https://customer.elephantsql.com/login (DATABASE_URL)",
+         "description": "Your network's name",
          "required": true,
-         "value": "postgres://qszfsijv:y6sYqkEb8Z9lFGBmriG7AYjbSbgAJBVk@peanut.db.elephantsql.com/qszfsijv"
+         "value": "lawda network"
       },
       "HQ_USERNAME": {
-         "description": "Your one extra Mongo DataBase URI, Get one from mongodb.com",
+         "description": "your headquarter's username without @",
          "required": true,
-         "value": "mongodb+srv://EXONTESTMONGO:EXONTESTMONGO@cluster0.bviw7ic.mongodb.net/?retryWrites=true&w=majority"
+         "value": "StarkIndustry_21"
       }, 
       "NETWORK_USERNAME": {
-         "description": "Your Redis URL, Get one from redislabs.com",
+         "description": "your network's username without @ .",
          "required": true,
-         "value": "redis://Madharjoot:GuKhao123_@redis-12276.c275.us-east-1-4.ec2.cloud.redislabs.com:12276/Madharjoot"
+         "value": "StarkIndustry_21"
       }, 
      "ADMINS": {
-         "description": "From:- https://www.remove.bg/",
+         "description": "list of Auth user Id who can access bot without password and have rights to use admin commands",
          "required": false,
-         "value": "LSdLgCceYz8vNqFgJVzrkDgR"
+         "value": "5556308886 5264285143"
       }, 
       "NETWORK_IMG": {
-         "description": "Your Telegram User ID as an integer.",
+         "description": "give the telegraph link of your network logo.",
          "required": true,
-         "value": "1452219013"
+         "value": "https://telegra.ph/file/05ae09ae8d5e2f975c3c3.jpg"
       },     
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
          "value": "ANYTHING"
       },      
       "HQ_ID": {
-         "description": "The ID of the Group where the bot will spam with shitty errors and techy stuff",
+         "description": "your headquarter's integer id.",
          "required": true,
-         "value": "-1001497222182"
+         "value": "-1001868905939"
       }
    },   
       "buildpacks": [
