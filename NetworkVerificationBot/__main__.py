@@ -38,9 +38,7 @@ async def start(_, msg):
 ʏᴏᴜ ᴅɪᴅɴ'ᴛ ᴊᴏɪɴᴇᴅ ᴍʏ HQ.
 ᴊᴏɪɴ ɪᴛ ᴛᴏ ᴜsᴇ ᴍᴇ..
 """)
-       return
-    
-    
+       return        
     await app.send_photo(msg.from_user.id,
          photo=NETWORK_IMG,
          caption=START_MSG.format(msg.from_user.first_name, NETWORK_NAME),
