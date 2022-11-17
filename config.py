@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+from os import getenv
 
 class Config:
     API_ID=16191628
