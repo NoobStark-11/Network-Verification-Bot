@@ -24,7 +24,7 @@ buttons = [
 async def start(_, msg):
     member=[]
     mem = await app.get_chat_members(-1001547036942,msg.from_user.id)
-    for i in mem:
+    async for i in mem:
         member.append(i.user.id)
     if  member not in mem:
         await msg.reply_text("join our chat first", reply_markup=InlineKeyboardMarkup (buttons))    
