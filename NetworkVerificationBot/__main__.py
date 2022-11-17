@@ -37,7 +37,8 @@ async def start(_, msg):
 ʜᴇʏ {msg.from_user.mention},
 ʏᴏᴜ ᴅɪᴅɴ'ᴛ ᴊᴏɪɴᴇᴅ ᴍʏ HQ.
 ᴊᴏɪɴ ɪᴛ ᴛᴏ ᴜsᴇ ᴍᴇ..
-""")
+""",
+     reply_markup=InlineKeyboardMarkup (HQ))
        return        
     await app.send_photo(msg.from_user.id,
          photo=NETWORK_IMG,
