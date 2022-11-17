@@ -41,8 +41,13 @@ You must,
             reply_markup=InlineKeyboardMarkup (buttons)
             )    
                 
+    elif msg.chat.type == "public":
+        await app.send_message(msg.from_user.id,
+            "Hey hlo",
+            reply_markup=InlineKeyboardMarkup (buttons)
+            )    
     else:
-        pass        
+        pass
 
 if __name__ == "__main__" :
     app.run()
