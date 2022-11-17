@@ -1,5 +1,5 @@
-from NetworkVerificationBot import app, VERIFICATION_CHANNEL_ID, NETWORK_IMG,TOS_LINK,APPROVED_CHANNEL_ID,ADMINS
-from pyrogram import filters ,enums
+from pyrogram import filters
+from NetworkVerificationBot import app, NETWORK_IMG,TOS_LINK,ADMINS,VERIFICATION_CHANNEL_ID, NETWORK_USERNAME
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
 VERIFY_MSG="""
@@ -17,13 +17,20 @@ VERIFY_BUTTONS= [
 
 VERIFY_BUTTON= [
          [
-           InlineKeyboardButton (text="approved",callback_data="yes_approved")
+           InlineKeyboardButton (text="ᴀᴘᴘʀᴏᴠᴇ",callback_data="yes_approved")
          ],
          [
-          InlineKeyboardButton (text="unapproved",callback_data="no_approved")        
+          InlineKeyboardButton (text="ᴅɪsᴀᴘᴘʀᴏᴠᴇ",callback_data="no_approved")        
          ],
       ]
-
+VERIFY_BUTTON= [
+         [
+           InlineKeyboardButton (text="ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ",url=f"https://t.me/{NETWORK_USERNAME}")
+         ],
+         [
+          InlineKeyboardButton (text="ɴᴇᴛᴡᴏʀᴋ",url=f"https://t.me/{NETWORK_USERNAME}")        
+         ],
+      ]
 
 @app.on_message(filters.command("verify"))
 async def verify(_,msg):
