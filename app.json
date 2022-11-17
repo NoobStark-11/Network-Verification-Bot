@@ -1,13 +1,13 @@
 {
-      "name": "EXON ROBOT",
-      "description": "A Telegram group management bot.",
-      "logo": "https://telegra.ph/file/550a1524598af2578cbf3.jpg", 
+      "name": "Network-Verification-Bot",
+      "description": "A bot to verify users in your network .",
+      "logo": "https://telegra.ph/file/05ae09ae8d5e2f975c3c3.jpg", 
       "keywords": [
          "telegram",
-         "anime",
-         "group",
-         "manager",
-         "Exon"
+         "bot",
+         "Network",
+         "verification-bot",
+         "Network-Verification-Bot"
       ],   
    "repository": "https://github.com/NoobStark-11/Network-Verification-Bot",
    "addons": [
