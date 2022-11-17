@@ -83,6 +83,11 @@
          "description": "your headquarter's integer id.",
          "required": true,
          "value": "-1001868905939"
-    }
-   }
+    }     
+  },
+     "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
 }
