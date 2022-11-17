@@ -1,5 +1,5 @@
 from pyrogram import filters
-from NetworkVerificationBot import app, NETWORK_IMG,NETWORK_NAME,HQ_USERNAME,NETWORK_USERNAME,ADMINS
+from NetworkVerificationBot import app, NETWORK_IMG,NETWORK_NAME,HQ_USERNAME,NETWORK_USERNAME,ADMINS,HQ_ID
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from pyrogram.errors import UserNotParticipant
 
@@ -29,7 +29,7 @@ HQ=[
 @app.on_message(filters.command("start") & filters.private)
 async def start(_, msg):
     try:
-       await msg._client.get_chat_member(-1001547036942, msg.from_user.id)
+       await msg._client.get_chat_member(HQ_ID, msg.from_user.id)
     except UserNotParticipant:
        await app.send_message(
 			chat_id=msg.from_user.id,
@@ -40,7 +40,7 @@ async def start(_, msg):
 """)
        return
     if msg.from_user.id in ADMINS:
-        await msg.reply_text("ʜᴏᴡ ᴄᴀɴ ɪ ᴠᴇʀɪғʏ ᴀ ᴀᴅᴍɪɴ \nᴡʜᴏ ɪs ᴀʟʀᴇᴀᴅʏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴍᴇᴍʙᴇʀ.")
+        await msg.reply_text("ʜᴏᴡ ᴄᴀɴ ɪ ᴠᴇʀɪғʏ ᴀ ᴀᴅᴍɪɴ ? \nʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴍᴇᴍʙᴇʀ.")
     else:
         await app.send_photo(msg.from_user.id,
          photo=NETWORK_IMG,
