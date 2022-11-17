@@ -39,7 +39,7 @@ async def start(_, msg):
 ᴊᴏɪɴ ɪᴛ ᴛᴏ ᴜsᴇ ᴍᴇ..
 """)
        return
-    if msg.from_user.id == ADMINS:
+    if msg.from_user.id in ADMINS:
         await msg.reply_text("ʜᴏᴡ ᴄᴀɴ ɪ ᴠᴇʀɪғʏ ᴀ ᴀᴅᴍɪɴ \nᴡʜᴏ ɪs ᴀʟʀᴇᴀᴅʏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴍᴇᴍʙᴇʀ.")
     else:
         await app.send_photo(msg.from_user.id,
