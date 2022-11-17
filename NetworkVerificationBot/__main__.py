@@ -23,7 +23,7 @@ buttons = [
 @app.on_message(filters.command("start") & filters.private)
 async def start(_, msg):
     member=[]
-    mem = await app.get_chat_members(-1001547036942,msg.from_user.id)
+    mem= app.get_chat_members(-1001547036942)
     async for i in mem:
         member.append(i.user.id)
     if  member not in mem:
