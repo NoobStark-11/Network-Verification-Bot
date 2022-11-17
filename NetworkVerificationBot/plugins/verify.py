@@ -100,7 +100,9 @@ async def verify(client,msg):
       reply_markup=InlineKeyboardMarkup (VERIFY_BUTTON)
      )
     except Exception as e:
-        await msg.reply_text("ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ʀᴇᴘᴏʀᴛ ᴀᴛ ᴏᴜʀ [ʜᴇᴀᴅǫᴜᴀᴛᴇʀs](f"https://t.me/{HQ_USERNAME}")")
+        await msg.reply_text("""
+ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ʀᴇᴘᴏʀᴛ ᴀᴛ ᴏᴜʀ [ʜᴇᴀᴅǫᴜᴀᴛᴇʀs](f"https://t.me/{HQ_USERNAME}")
+""")
     
     await msg.reply_text("""
     sᴜᴄᴄᴇssғᴜʟʟʏ ʏᴏᴜʀ ғᴏʀᴍ sᴜʙᴍɪᴛᴛᴇᴅ ᴛᴏ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ. ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ sᴏᴍᴇᴛɪᴍᴇ ᴛᴏ ɢᴇᴛ ᴏғғɪᴄɪᴀʟʏ ᴠᴇʀɪғɪᴇᴅ.
