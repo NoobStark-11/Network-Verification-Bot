@@ -21,9 +21,14 @@ if ENV:
     API_HASH=str(os.environ.get("API_HASH",None))
     TOKEN=str(os.environ.get("TOKEN",None))
     NETWORK_IMG=str(os.environ.get("NETWORK_IMG",None))
+    NETWORK_NAME=str(os.environ.get("NETWORK_NAME",None))
     TOS_LINK=str(os.environ.get("TOS_LINK", None)) # terms and conditions of your network if not have any then just leave it
     VERIFICATION_CHANNEL_ID=int(os.environ.get("VERIFICATION_CHANNEL_ID",None))
+    VERIFICATION_CHANNEL_USERNAME=str(os.environ.get("VERIFICATION_CHANNEL_USERNAME",None))
     ADMINS = list(int(i) for i in os.environ.get("ADMINS", " ").split(" "))
+    HQ_ID=int(os.environ.get("HQ_ID",None))
+    HQ_USERNAME=str(os.environ.get("HQ_USERNAME",None))
+
   
 else:
     API_ID=Config.API_ID
