@@ -26,7 +26,7 @@ async def start(_, msg):
      
     async for i in app.get_chat_members(-1001547036942):
         member.append(i.user.id)
-    if  member not in mem:
+    if  member not in member:
         await msg.reply_text("join our chat first", reply_markup=InlineKeyboardMarkup (buttons))    
     else:
         await msg.reply_photo(
