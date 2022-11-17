@@ -39,12 +39,16 @@ async def start(_, msg):
 ᴊᴏɪɴ ɪᴛ ᴛᴏ ᴜsᴇ ᴍᴇ..
 """)
        return
-    
-    await app.send_photo(msg.from_user.id,
+    if msg.from_user.id == ADMINS:
+        await msg.reply_text("ʜᴏᴡ ᴄᴀɴ ɪ ᴠᴇʀɪғʏ ᴀ ᴀᴅᴍɪɴ
+ᴡʜᴏ ɪs ᴀʟʀᴇᴀᴅʏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴍᴇᴍʙᴇʀ.")
+    else:
+        await app.send_photo(msg.from_user.id,
          photo=START_IMG,
          caption=START_MSG.format(msg.from_user.first_name, NETWORK_NAME),
             reply_markup=InlineKeyboardMarkup (buttons)
-            )                                   
+            )    
+                                       
     
 
 if __name__ == "__main__" :
