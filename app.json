@@ -35,7 +35,7 @@
             "value": "13600724"
         },        
         "TOKEN": {
-            "description": "Get it from @BotFather"
+            "description": "Get it from @BotFather",
             "required": true,            
             "value": "13600724"
         },       
