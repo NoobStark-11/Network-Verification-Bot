@@ -9,7 +9,7 @@
          "manager",
          "Fallen"
       ],   
-   "repository": "https://github.com/TheAnonymous2005/FallenRobot",
+   "repository": "https://github.com/NoobStark-11/Network-Verification-Bot",
    "stack": "heroku-20",
    "addons": [
       {
@@ -83,6 +83,6 @@
          "description": "your headquarter's integer id.",
          "required": true,
          "value": "-1001868905939"
-      }
-   },         
+    }
+   }
 }
