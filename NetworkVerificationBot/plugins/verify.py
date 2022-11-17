@@ -1,5 +1,5 @@
 from pyrogram import filters
-from NetworkVerificationBot import app, NETWORK_IMG,TOS_LINK,ADMINS,VERIFICATION_CHANNEL_ID, NETWORK_USERNAME,VERIFICATION_CHANNEL_USERNAME
+from NetworkVerificationBot import app, NETWORK_IMG,TOS_LINK,ADMINS,VERIFICATION_CHANNEL_ID, NETWORK_USERNAME,VERIFICATION_CHANNEL_USERNAME,HQ_USERNAME
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
 VERIFY_MSG="""
@@ -72,7 +72,8 @@ async def verify(client,msg):
     about = await client.ask(id,"ᴛᴇʟʟ ᴍᴇ sᴏᴍᴇᴛʜɪɴɢ ᴀʙᴏᴜᴛ ʏᴏᴜʀsᴇʟғ.")
     tag = await client.ask(id,"ᴄᴀɴ ʏᴏᴜ ᴘᴜᴛ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴛᴀɢ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ ?")
     reason = await client.ask(id,"ʜᴀᴠᴇ ᴀɴʏ  ʀᴇᴀsᴏɴ ᴛᴏ ᴊᴏɪɴɪɴɢ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ, ɪғ ʜᴀᴠᴇ ᴛʜᴇɴ ᴡʀɪᴛᴇ ɪᴛ ᴅᴏᴡɴ.")    
-    await app.send_message(VERIFICATION_CHANNEL_ID,
+    try:
+        await app.send_message(VERIFICATION_CHANNEL_ID,
     f"""
  ❍═❰ 𝚅𝙴𝚁𝙸𝙵𝙸𝙲𝙰𝚃𝙸𝙾𝙽 𝙵𝙾𝚁𝙼 ❱═❍
 ◎ ─━──━─❖─━──━─ ◎
@@ -98,6 +99,9 @@ async def verify(client,msg):
 """,
       reply_markup=InlineKeyboardMarkup (VERIFY_BUTTON)
      )
+    except Exception as e:
+        await msg.reply_text("ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ʀᴇᴘᴏʀᴛ ᴀᴛ ᴏᴜʀ [ʜᴇᴀᴅǫᴜᴀᴛᴇʀs](f"https://t.me/{HQ_USERNAME})
+    
     await msg.reply_text("""
     sᴜᴄᴄᴇssғᴜʟʟʏ ʏᴏᴜʀ ғᴏʀᴍ sᴜʙᴍɪᴛᴛᴇᴅ ᴛᴏ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ. ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ sᴏᴍᴇᴛɪᴍᴇ ᴛᴏ ɢᴇᴛ ᴏғғɪᴄɪᴀʟʏ ᴠᴇʀɪғɪᴇᴅ.
 ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ.
