@@ -38,6 +38,7 @@ else:
     ADMINS=Config.ADMINS
     NETWORK_IMG=Config.NETWORK_IMG
     HQ_ID=Config.HQ_ID
+
 app=Client(
     "VERIFICATION-BOT",
     api_id=API_ID,
@@ -45,4 +46,4 @@ app=Client(
     bot_token=TOKEN,
     plugins=dict(root="NetworkVerificationBot/plugins")
      )
-
+LOG.info("starting the bot....")
