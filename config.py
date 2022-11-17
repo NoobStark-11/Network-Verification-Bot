@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+
 class Config:
     API_ID=16191628
     API_HASH="7d5acccaf1df4f5b7a690b203fd1953e"
@@ -13,5 +15,5 @@ class Config:
     APPROVED_CHANNEL_ID = -1001673903836
    # ADMINS=int(5264285143,1937701729).split(",")
     ADMINS = list(
-    map(int("ADMINS", "5264285143 1937701729").split()))
+    map(int,getenv("ADMINS", "5264285143 1937701729").split()))
     NETWORK_IMG="https://telegra.ph/file/2c7a09bff109deec3e305.jpg"
