@@ -63,9 +63,9 @@ async def verify(client,msg):
     full_name = await client.ask(id,"ᴡʜᴀᴛ ɪs ʏᴏᴜʀ ғᴜʟʟ ɴᴀᴍᴇ ?")
     age = await client.ask(id,"ʜᴏᴡ ᴏʟᴅ ᴀʀᴇ ʏᴏᴜ ?")
     gender = await client.ask(id,"ᴡʜᴀᴛ's ʏᴏᴜʀ ɢᴇɴᴅᴇʀ ?")
-    channels = await client.ask(id,"ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇs")
-    groups = await client.ask(id,"ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇs")
-    bots = await client.ask(id,"ʏᴏᴜʀ ʙᴏᴛ ᴜsᴇʀɴᴀᴍᴇs")
+    channels = await client.ask(id,"ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟs ᴜsᴇʀɴᴀᴍᴇs")
+    groups = await client.ask(id,"ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴜsᴇʀɴᴀᴍᴇs")
+    bots = await client.ask(id,"ʏᴏᴜʀ ʙᴏᴛs ᴜsᴇʀɴᴀᴍᴇs")
     country = await client.ask(id,"ғʀᴏᴍ ᴡʜɪᴄʜ ᴄᴏᴜɴᴛʀʏ ʏᴏᴜ ʙᴇʟᴏɴɢ ᴛᴏ ?")
     skills = await client.ask(id,"ʜᴀᴠᴇ ᴀɴʏ sᴋɪʟʟ ?")
     github = await client.ask(id,"ʜᴀᴠᴇ ɢɪᴛʜᴜʙ ᴀᴄᴄᴏᴜᴛ..?\nɢɪᴠᴇ ᴍᴇ ᴛʜᴇ ʟɪɴᴋ")
@@ -109,16 +109,7 @@ async def verify(client,msg):
 ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ.
      """,reply_markup=InlineKeyboardMarkup (OK))
     
-#@app.on_callback_query(filters.regex("yes_approved"))
-#async def _aproved(bot:app,callback_query:CallbackQuery):
-#    admins=[]
-#    for m in bot.get_chat_members(
-#         VERIFICATION_CHANNEL_ID,filter=enums.ChatMembersFilter.ADMINISTRATORS):
-#        admins.append(m.user.id)
-#    if callback_query.from_user.id in admins:
-#        callback_query.message.edit_text("hii")
-#    else:
-#        pass
+
 
 @app.on_callback_query(filters.regex("yes_approved"))
 async def _aproved(bot:app,callback_query:CallbackQuery):    
@@ -127,7 +118,7 @@ async def _aproved(bot:app,callback_query:CallbackQuery):
         await callback_query.message.edit_text(f"""
 **ᴀᴘᴘʀᴏᴠᴇᴅ** :
 
-ᴜsᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴘᴘʀᴏᴠᴇᴅ
+ᴜsᴇʀ ʜᴀᴠᴇ ʙᴇᴇɴ ᴀᴘᴘʀᴏᴠᴇᴅ
 ʙʏ ᴜsᴇʀ: {callback_query.from_user.mention}
 
 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ;)
@@ -144,10 +135,10 @@ async def _disaproved(bot:app,callback_query:CallbackQuery):
 
 **ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ** :
 
-ᴜsᴇʀ ʜᴀs ʙᴇᴇɴ ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ
+ᴜsᴇʀ ʜᴀᴠᴇ ʙᴇᴇɴ ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ
 ʙʏ ᴜsᴇʀ: {callback_query.from_user.mention}
 
-sᴏʀʀʏ ʏᴏᴜ ᴀʀᴇ ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴛᴏ ᴏᴜʀ ᴀᴅᴍɪɴs  ɪғ ᴡᴀɴɴᴀ ɢᴇᴛ ᴀᴘᴘʀᴏᴠᴇ
+sᴏʀʀʏ ʏᴏᴜ ᴀʀᴇ ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴛᴏ ᴏᴜʀ ᴀᴅᴍɪɴs  ɪғ ᴡᴀɴɴᴀ ɢᴇᴛ ᴀᴘᴘʀᴏᴠᴇᴅ.
 """,
        reply_markup=InlineKeyboardMarkup (OK))
     else:
