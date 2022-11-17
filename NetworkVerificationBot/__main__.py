@@ -1,5 +1,5 @@
 from pyrogram import filters
-from NetworkVerificationBot import app, NETWORK_IMG,NETWORK_NAME,HQ_USERNAME,NETWORK_USERNAME,ADMINS,HQ_ID
+from NetworkVerificationBot import app, NETWORK_IMG,NETWORK_NAME,HQ_USERNAME,NETWORK_USERNAME,ADMINS,HQ_ID,LOG
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from pyrogram.errors import UserNotParticipant
 
