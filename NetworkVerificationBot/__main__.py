@@ -29,9 +29,9 @@ async def start(_, msg):
        await app.send_message(
 			chat_id=msg.from_user.id,
 			text=f"""
-🚧 **Access Denied** {message.from_user.mention}
+🚧 **Access Denied** {msg.from_user.mention}
 You must,
-🔹[join Our Telegram Channel](https://t.me/{CHANNEL}).
+🔹[join Our Telegram Channel](https://t.me/ok).
 """)
        return
     if msg.chat.type == "private":
