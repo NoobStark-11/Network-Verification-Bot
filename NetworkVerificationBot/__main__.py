@@ -29,9 +29,9 @@ async def start(_, msg):
        await app.send_message(
 			chat_id=msg.from_user.id,
 			text=f"""
-🚧 **Access Denied** {msg.from_user.mention}
-You must,
-🔹[join Our Telegram Channel](https://t.me/ok).
+ʜᴇʏ {msg.from_user.mention},
+ʏᴏᴜ ᴅɪᴅɴ'ᴛ ᴊᴏɪɴᴇᴅ ᴍʏ HQ.
+ᴊᴏɪɴ ɪᴛ ᴛᴏ ᴜsᴇ ᴍᴇ..
 """)
        return
     
