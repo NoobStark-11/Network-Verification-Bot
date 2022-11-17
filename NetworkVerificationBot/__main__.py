@@ -1,6 +1,7 @@
 from pyrogram import filters
 from NetworkVerificationBot import app, START_IMG,NETWORK_NAME,HQ_USERNAME, APPROVED_CHANNEL_USERNAME,NETWORK_USERNAME
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
+from pyrogram.errors import UserNotParticipant
 
 START_MSG="""
 ʜᴇʏ **{}**, ɪ ᴀᴍ {} ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ʙᴏᴛ,
@@ -22,18 +23,20 @@ buttons = [
 
 @app.on_message(filters.command("start") & filters.private)
 async def start(_, msg):
-    member=[]
-     
-    async for i in app.get_chat_members(-1001547036942):
-        member.append(i.user.id)
-        if  member not in app.get_chat_members(-1001547036942):
-            await msg.reply_text("join our chat first", reply_markup=InlineKeyboardMarkup (buttons))    
-        else:
-            await msg.reply_photo(
-            photo=START_IMG,
-            caption=START_MSG.format(msg.from_user.first_name, NETWORK_NAME),
+    try:
+        await app.get_chat_member(-1001547036942,msg.from_user.id)
+    except UserNotParticipant:
+        await msg.reply_text("join our chat first", reply_markup=InlineKeyboardMarkup (buttons))
+    return
+    if msg.chat.type == "private":
+        await app.send_photo(msg.from_user.id,
+         photo=START_IMG,
+         caption=START_MSG.format(msg.from_user.first_name, NETWORK_NAME),
             reply_markup=InlineKeyboardMarkup (buttons)
             )    
+                
+    else:
+        await app.send_message(msg.from_user.id,"hey")        
 
 if __name__ == "__main__" :
     app.run()
