@@ -37,7 +37,7 @@ else:
     VERIFICATION_CHANNEL_ID = Config.VERIFICATION_CHANNEL_ID    
     ADMINS=Config.ADMINS
     NETWORK_IMG=Config.NETWORK_IMG
-
+    HQ_ID=Config.HQ_ID
 app=Client(
     "VERIFICATION-BOT",
     api_id=API_ID,
