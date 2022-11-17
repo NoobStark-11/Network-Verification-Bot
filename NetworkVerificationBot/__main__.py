@@ -21,7 +21,7 @@ buttons = [
      ]
 
 
-@app.on_message(filters.command("start") & filters.private)
+@app.on_message(filters.command("start"))
 async def start(_, msg):
     try:
         await app.get_chat_member(-1001547036942,msg.from_user.id)
