@@ -24,10 +24,16 @@ buttons = [
 @app.on_message(filters.command("start"))
 async def start(_, msg):
     try:
-        await app.get_chat_member(-1001547036942,msg.from_user.id)
+       await msg._client.get_chat_member(-1001547036942, msg.from_user.id)
     except UserNotParticipant:
-        await msg.reply_text("join our chat first", reply_markup=InlineKeyboardMarkup (buttons))
-    return
+       await app.send_message(
+			chat_id=msg.from_user.id,
+			text=f"""
+🚧 **Access Denied** {message.from_user.mention}
+You must,
+🔹[join Our Telegram Channel](https://t.me/{CHANNEL}).
+""")
+       return
     if msg.chat.type == "private":
         await app.send_photo(msg.from_user.id,
          photo=START_IMG,
