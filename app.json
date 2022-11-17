@@ -1,15 +1,16 @@
 {
-      "name": "Network-Verification-Bot",
-      "description": "A bot to verify users in your network .",
-      "logo": "https://telegra.ph/file/05ae09ae8d5e2f975c3c3.jpg", 
+      "name": "Fallen Robot",
+      "description": "Telegram Group Management Bot.",
+      "logo": "https://telegra.ph/file/72e135da30a1a349f2844.jpg",
       "keywords": [
          "telegram",
-         "bot",
-         "Network",
-         "verification-bot",
-         "Network-Verification-Bot"
+         "sexy",
+         "group",
+         "manager",
+         "Fallen"
       ],   
-   "repository": "https://github.com/NoobStark-11/Network-Verification-Bot",
+   "repository": "https://github.com/TheAnonymous2005/FallenRobot",
+   "stack": "heroku-20",
    "addons": [
       {
          "options": {
@@ -83,6 +84,5 @@
          "required": true,
          "value": "-1001868905939"
       }
-   },   
-  }    
+   },         
 }
