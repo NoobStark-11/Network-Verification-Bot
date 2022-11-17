@@ -40,7 +40,7 @@ async def start(_, msg):
 """)
        return
     if msg.from_user.id == ADMINS:
-        await msg.reply_text("hey")
+        await msg.reply_text("ʜᴏᴡ ᴄᴀɴ ɪ ᴠᴇʀɪғʏ ᴀ ᴀᴅᴍɪɴ \nᴡʜᴏ ɪs ᴀʟʀᴇᴀᴅʏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴍᴇᴍʙᴇʀ.")
     else:
         await app.send_photo(msg.from_user.id,
          photo=START_IMG,
