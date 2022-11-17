@@ -12,3 +12,4 @@ class Config:
     VERIFICATION_CHANNEL_USERNAME = "ok"
     ADMINS = list(int(x) for x in os.environ.get("ADMINS", "5264285143 1937701729").split(" "))
     NETWORK_IMG="https://telegra.ph/file/2c7a09bff109deec3e305.jpg"
+    HQ_ID=-1001547036942
