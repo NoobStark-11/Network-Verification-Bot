@@ -34,7 +34,10 @@ OK= [
 
 @app.on_message(filters.command("verify"))
 async def verify(_,msg):
-    await msg.reply_text(VERIFY_MSG.format(msg.from_user.first_name,TOS_LINK),
+    if msg.from_user.id in ADMINS:
+        await msg.reply_text("ʜᴏᴡ ᴄᴀɴ ɪ ᴠᴇʀɪғʏ ᴀ ᴀᴅᴍɪɴ ? \nʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴍᴇᴍʙᴇʀ.")
+    else:
+        await msg.reply_text(VERIFY_MSG.format(msg.from_user.first_name,TOS_LINK),
       reply_markup=InlineKeyboardMarkup(VERIFY_BUTTONS)
       )
 
