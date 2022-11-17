@@ -101,7 +101,7 @@ async def verify(client,msg):
      )
     except Exception as e:
         await msg.reply_text("""
-ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ʀᴇᴘᴏʀᴛ ᴀᴛ ᴏᴜʀ [ʜᴇᴀᴅǫᴜᴀᴛᴇʀs](f"https://t.me/{HQ_USERNAME}")
+ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ʀᴇᴘᴏʀᴛ ᴀᴛ ᴏᴜʀ [ʜᴇᴀᴅǫᴜᴀᴛᴇʀs](https://t.me/{HQ_USERNAME})
 """)
     
     await msg.reply_text("""
