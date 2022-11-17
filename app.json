@@ -27,41 +27,42 @@
         },        
         "TOKEN": {
             "description": "Get it from @BotFather"
+            "required": true
         },       
         "TOS_LINK": {
-            "description": "A default caption to be added to the file at bottom",
-            "required": false
+            "description": "your network's terms and conditions link",
+            "required": true
         },
         "VERIFICATION_CHANNEL_ID": {
-            "description": "A telegram channel username without @ to force users to join channel before using bot.",
+            "description": "your verification channel integer id where bot will send filled forms",
             "required": true
         },
         "VERIFICATION_CHANNEL_USERNAME": {
-            "description": "Your Telegram user id, Get this from @FileStore_Nsbot."
+            "description": "your verification channel username without @ where bot will send filled forms"
         },
         "ENV": {
             "description": "Set it to anything to enable configuration by environment variables.",
             "value": "ANYTHING"
         },
         "NETWORK_NAME": {
-            "description": "Set the timegap in sec to reduce FloodWait. If you don't want to add leave empty. ",
-            "required": false
+            "description": "your network name ",
+            "required": true
         },
         "HQ_USERNAME": {
-            "description": "A telegram channel or group id to know who are using bot",
+            "description": "your headquarters username without @ .",
             "required": false
         },
         "NETWORK_USERNAME": {
-            "description": "Set the timegap in sec to reduce FloodWait. If you don't want to add leave empty. ",
+            "description": "your network's username without @ .",
             "required": false
         },
         "NETWORK_IMG": {
-            "description": "Set the timegap in sec to reduce FloodWait. If you don't want to add leave empty. ",
+            "description": "give the telegraph link of your network logo ",
             "required": false
         },
        "HQ_ID": {
-            "description": "Set the timegap in sec to reduce FloodWait. If you don't want to add leave empty. ",
-            "required": false
+            "description": "your headquarter's integer id",
+            "required": true
         }
     },
 
