@@ -38,6 +38,7 @@ async def verify(_,msg):
         await msg.reply_text("ʜᴏᴡ ᴄᴀɴ ɪ ᴠᴇʀɪғʏ ᴀ ᴀᴅᴍɪɴ ? \nʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴍᴇᴍʙᴇʀ.")
     else:
         await msg.reply_text(VERIFY_MSG.format(msg.from_user.first_name,TOS_LINK),
+      disable_web_page_preview=True
       reply_markup=InlineKeyboardMarkup(VERIFY_BUTTONS)
       )
 
