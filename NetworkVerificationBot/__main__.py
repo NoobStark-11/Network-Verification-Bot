@@ -22,11 +22,15 @@ buttons = [
 
 @app.on_message(filters.command("start") & filters.private)
 async def start(_, msg):
-    await msg.reply_photo(
+    mem = await app.get_chat_member(-1001547036942,msg.from_user.id)
+    if  msg.from_user.id not in mem:
+    await msg.reply_text("join our chat first", reply_markup=InlineKeyboardMarkup (buttons))
+    else:
+        await msg.reply_photo(
             photo=START_IMG,
             caption=START_MSG.format(msg.from_user.first_name, NETWORK_NAME),
             reply_markup=InlineKeyboardMarkup (buttons)
-            )
+            )    
 
 if __name__ == "__main__" :
     app.run()
