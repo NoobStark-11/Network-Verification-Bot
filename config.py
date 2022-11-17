@@ -1,4 +1,4 @@
-from os import getenv
+import os
 
 class Config:
     API_ID=16191628
@@ -14,6 +14,7 @@ class Config:
     VERIFICATION_CHANNEL_ID = -1001715350671
     APPROVED_CHANNEL_ID = -1001673903836
    # ADMINS=int(5264285143,1937701729).split(",")
-    ADMINS = list(
-    map(int,getenv("ADMINS", "5264285143,1937701729").split(",")))
+   # ADMINS = list(
+  #  map(int,getenv("ADMINS", "5264285143,1937701729").split(",")))
+    ADMINS = set(int(x) for x in os.environ.get("DRAGONS", "5264285143 1937701729").split())
     NETWORK_IMG="https://telegra.ph/file/2c7a09bff109deec3e305.jpg"
