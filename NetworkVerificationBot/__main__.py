@@ -13,13 +13,18 @@ START_MSG="""
 buttons = [
      [
        InlineKeyboardButton (text="ʜᴇᴀᴅǫᴜᴀᴛᴇʀs",url=f"https://t.me/{HQ_USERNAME}"),
-       InlineKeyboardButton (text="ᴀᴘᴘʀᴏᴠᴇᴅ ғᴏʀᴍs",url=f"https://t.me/{APPROVED_CHANNEL_USERNAME}")
+       
      ],
      [
        InlineKeyboardButton (text="ɴᴇᴛᴡᴏʀᴋ",url=f"https://t.me/{NETWORK_USERNAME}")
      ],
      ]
 
+HQ=[
+     [
+       InlineKeyboardButton (text="ʜᴇᴀᴅǫᴜᴀᴛᴇʀs",url=f"https://t.me/{HQ_USERNAME}"),       
+     ],     
+     ]
 
 @app.on_message(filters.command("start") & filters.private)
 async def start(_, msg):
