@@ -1,19 +1,18 @@
 {
-    "name": "TG Renamer Bot",
-    "description": "The Telegram file renamer bot based on Pyrogram.",
-    "logo": "https://telegra.ph/file/8324a0863fed98d4dfb6c.jpg",
+    "name": "Network-Verification-Bot",
+    "description": "a verification bot to verify user in your network",
+    "logo": "https://telegra.ph/file/05ae09ae8d5e2f975c3c3.jpg",
 
     "keywords": [
-        "telegram",
-        "bot",
-        "best",
-        "renamer"
+        "network",
+        "Telegram",
+        "Bot",
+        "verification"
     ],
 
-    "repository": "https://github.com/Ns-AnoNymouS/Renamer",
+    "repository": "https://github.com/NoobStark-11/Network-Verification-Bot",
     "stack": "heroku-20",
-    "website": "https://t.me/Ns_bot_updates",
-    "success_url": "https://t.me/RenamerNs_bot",
+    
 
     "env": {
         "API_HASH": {
