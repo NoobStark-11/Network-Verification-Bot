@@ -21,7 +21,7 @@ buttons = [
      ]
 
 
-@app.on_message(filters.command("start"))
+@app.on_message(filters.command("start") & filters.private)
 async def start(_, msg):
     try:
        await msg._client.get_chat_member(-1001547036942, msg.from_user.id)
@@ -34,15 +34,13 @@ You must,
 🔹[join Our Telegram Channel](https://t.me/ok).
 """)
        return
-    if msg.chat.type != "private":
-        await app.send_photo(msg.from_user.id,
+    
+    await app.send_photo(msg.from_user.id,
          photo=START_IMG,
          caption=START_MSG.format(msg.from_user.first_name, NETWORK_NAME),
             reply_markup=InlineKeyboardMarkup (buttons)
-            )                           
-    else:
-        pass
-
+            )                                   
+    
 
 if __name__ == "__main__" :
     app.run()
