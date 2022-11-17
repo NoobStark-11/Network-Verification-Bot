@@ -126,7 +126,7 @@ async def _aproved(bot:app,callback_query:CallbackQuery):
 
 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ;)
 """,
-       reply_markup=InlineKeyboardMarkup (OK)    
+       reply_markup=InlineKeyboardMarkup (OK))
     else:
         pass    
 
