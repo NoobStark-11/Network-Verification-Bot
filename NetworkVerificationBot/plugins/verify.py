@@ -118,8 +118,8 @@ async def verify(client,msg):
 async def _aproved(bot:app,callback_query:CallbackQuery):    
     username = callback_query.from_user.username      
     if callback_query.from_user.id == ADMINS:
-        await callback_query.message.edit_text("""
-ᴀᴘᴘʀᴏᴠᴇᴅ :
+        await callback_query.message.edit_text(f"""
+**ᴀᴘᴘʀᴏᴠᴇᴅ** :
 
 ᴜsᴇʀ ʜᴀs ʙᴇᴇɴ ᴀᴘᴘʀᴏᴠᴇᴅ
 ʙʏ ᴜsᴇʀ: {callback_query.from_user.mention}
@@ -134,6 +134,15 @@ async def _aproved(bot:app,callback_query:CallbackQuery):
 async def _disaproved(bot:app,callback_query:CallbackQuery):  
     username = callback_query.from_user.username  
     if callback_query.from_user.id == ADMINS:
-        await callback_query.message.edit_text(APPROVED_CHANNEL_ID,"a new user has been unapproved")    
+        await callback_query.message.edit_text(f"""
+
+**ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ** :
+
+ᴜsᴇʀ ʜᴀs ʙᴇᴇɴ ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ
+ʙʏ ᴜsᴇʀ: {callback_query.from_user.mention}
+
+sᴏʀʀʏ ʏᴏᴜ ᴀʀᴇ ᴅɪsᴀᴘᴘʀᴏᴠᴇᴅ ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴛᴏ ᴏᴜʀ ᴀᴅᴍɪɴs  ɪғ ᴡᴀɴɴᴀ ɢᴇᴛ ᴀᴘᴘʀᴏᴠᴇ
+""",
+       reply_markup=InlineKeyboardMarkup (OK))
     else:
-        pass         
+        pass             
