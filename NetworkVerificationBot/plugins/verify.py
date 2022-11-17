@@ -1,5 +1,5 @@
 from pyrogram import filters
-from NetworkVerificationBot import app, NETWORK_IMG,TOS_LINK,ADMINS,VERIFICATION_CHANNEL_ID, NETWORK_USERNAME
+from NetworkVerificationBot import app, NETWORK_IMG,TOS_LINK,ADMINS,VERIFICATION_CHANNEL_ID, NETWORK_USERNAME,VERIFICATION_CHANNEL_USERNAME
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,CallbackQuery 
     
 VERIFY_MSG="""
@@ -25,7 +25,7 @@ VERIFY_BUTTON= [
       ]
 OK= [
          [
-           InlineKeyboardButton (text="ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ",url=f"https://t.me/{NETWORK_USERNAME}")
+           InlineKeyboardButton (text="ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ",url=f"https://t.me/{VERIFICATION_CHANNEL_USERNAME}")
          ],
          [
           InlineKeyboardButton (text="ɴᴇᴛᴡᴏʀᴋ",url=f"https://t.me/{NETWORK_USERNAME}")        
@@ -101,7 +101,7 @@ async def verify(client,msg):
     await msg.reply_text("""
     sᴜᴄᴄᴇssғᴜʟʟʏ ʏᴏᴜʀ ғᴏʀᴍ sᴜʙᴍɪᴛᴛᴇᴅ ᴛᴏ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ. ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ sᴏᴍᴇᴛɪᴍᴇ ᴛᴏ ɢᴇᴛ ᴏғғɪᴄɪᴀʟʏ ᴠᴇʀɪғɪᴇᴅ.
 ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ.
-     """)
+     """,reply_markup=InlineKeyboardMarkup (OK))
     
 #@app.on_callback_query(filters.regex("yes_approved"))
 #async def _aproved(bot:app,callback_query:CallbackQuery):
