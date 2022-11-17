@@ -34,7 +34,7 @@ You must,
 🔹[join Our Telegram Channel](https://t.me/ok).
 """)
        return
-    if msg.chat.type == "private":
+    if msg.chat.type != "private":
         await app.send_photo(msg.from_user.id,
          photo=START_IMG,
          caption=START_MSG.format(msg.from_user.first_name, NETWORK_NAME),
