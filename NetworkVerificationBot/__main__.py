@@ -24,7 +24,9 @@ buttons = [
 async def start(_, msg):
     mem = await app.get_chat_member(-1001547036942,msg.from_user.id)
     if  msg.from_user.id not in mem:
-    await msg.reply_text("join our chat first", reply_markup=InlineKeyboardMarkup (buttons))
+        await msg.reply_text("join our chat first", reply_markup=InlineKeyboardMarkup (buttons))
+
+    
     else:
         await msg.reply_photo(
             photo=START_IMG,
