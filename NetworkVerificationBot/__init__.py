@@ -22,6 +22,7 @@ if ENV:
     TOKEN=str(os.environ.get("TOKEN",None))
     NETWORK_IMG=str(os.environ.get("NETWORK_IMG",None))
     NETWORK_NAME=str(os.environ.get("NETWORK_NAME",None))
+    NETWORK_USERNAME=str(os.environ.get("NETWORK_USERNAME",None))
     TOS_LINK=str(os.environ.get("TOS_LINK", None)) # terms and conditions of your network if not have any then just leave it
     VERIFICATION_CHANNEL_ID=int(os.environ.get("VERIFICATION_CHANNEL_ID",None))
     VERIFICATION_CHANNEL_USERNAME=str(os.environ.get("VERIFICATION_CHANNEL_USERNAME",None))
