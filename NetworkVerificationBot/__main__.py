@@ -51,4 +51,5 @@ async def start(_, msg):
     
 
 if __name__ == "__main__" :
+    LOG.info("bot started ⚡⚡")
     app.run()
