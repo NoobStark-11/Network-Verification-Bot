@@ -1,5 +1,5 @@
 from pyrogram import filters
-from NetworkVerificationBot import app, START_IMG,NETWORK_NAME,HQ_USERNAME,NETWORK_USERNAME,ADMINS
+from NetworkVerificationBot import app, NETWORK_IMG,NETWORK_NAME,HQ_USERNAME,NETWORK_USERNAME,ADMINS
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from pyrogram.errors import UserNotParticipant
 
@@ -43,7 +43,7 @@ async def start(_, msg):
         await msg.reply_text("ʜᴏᴡ ᴄᴀɴ ɪ ᴠᴇʀɪғʏ ᴀ ᴀᴅᴍɪɴ \nᴡʜᴏ ɪs ᴀʟʀᴇᴀᴅʏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴍᴇᴍʙᴇʀ.")
     else:
         await app.send_photo(msg.from_user.id,
-         photo=START_IMG,
+         photo=NETWORK_IMG,
          caption=START_MSG.format(msg.from_user.first_name, NETWORK_NAME),
             reply_markup=InlineKeyboardMarkup (buttons)
             )    
