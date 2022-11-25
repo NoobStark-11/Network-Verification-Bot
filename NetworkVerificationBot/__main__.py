@@ -26,7 +26,7 @@ HQ=[
      ],     
      ]
 
-@app.on_message(filters.command("start") & filters.private)
+@app.on_message(filters.command("start"))
 async def start(_, msg):
     try:
        await msg._client.get_chat_member(HQ_ID, msg.from_user.id)
