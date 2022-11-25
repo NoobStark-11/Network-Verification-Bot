@@ -36,6 +36,9 @@ OK= [
 async def verify(_,msg):
     if msg.from_user.id in ADMINS:
         await msg.reply_text("ʜᴏᴡ ᴄᴀɴ ɪ ᴠᴇʀɪғʏ ᴀ ᴀᴅᴍɪɴ ? \nʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴍᴇᴍʙᴇʀ.")
+
+    elif msg.chat.type!="private":
+        await msg.reply_text("this command can only be used in private")
     else:
         await msg.reply_text(VERIFY_MSG.format(msg.from_user.first_name,TOS_LINK),
       disable_web_page_preview=True,
@@ -59,24 +62,27 @@ async def nope(_, CallbackQuery):
 
 @app.on_message(filters.command("continue"))
 async def verify(client,msg):
-    id=msg.chat.id   
-    first_name = msg.from_user.first_name
-    username = msg.from_user.username
-    user_id = msg.from_user.id
-    dc_id = msg.from_user.dc_id            
-    full_name = await client.ask(id,"ᴡʜᴀᴛ ɪs ʏᴏᴜʀ ғᴜʟʟ ɴᴀᴍᴇ ?")
-    age = await client.ask(id,"ʜᴏᴡ ᴏʟᴅ ᴀʀᴇ ʏᴏᴜ ?")
-    gender = await client.ask(id,"ᴡʜᴀᴛ's ʏᴏᴜʀ ɢᴇɴᴅᴇʀ ?")
-    channels = await client.ask(id,"ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟs ᴜsᴇʀɴᴀᴍᴇs")
-    groups = await client.ask(id,"ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴜsᴇʀɴᴀᴍᴇs")
-    bots = await client.ask(id,"ʏᴏᴜʀ ʙᴏᴛs ᴜsᴇʀɴᴀᴍᴇs")
-    country = await client.ask(id,"ғʀᴏᴍ ᴡʜɪᴄʜ ᴄᴏᴜɴᴛʀʏ ʏᴏᴜ ʙᴇʟᴏɴɢ ᴛᴏ ?")
-    skills = await client.ask(id,"ʜᴀᴠᴇ ᴀɴʏ sᴋɪʟʟ ?")
-    github = await client.ask(id,"ʜᴀᴠᴇ ɢɪᴛʜᴜʙ ᴀᴄᴄᴏᴜᴛ..?\nɢɪᴠᴇ ᴍᴇ ᴛʜᴇ ʟɪɴᴋ")
-    about = await client.ask(id,"ᴛᴇʟʟ ᴍᴇ sᴏᴍᴇᴛʜɪɴɢ ᴀʙᴏᴜᴛ ʏᴏᴜʀsᴇʟғ.")
-    tag = await client.ask(id,"ᴄᴀɴ ʏᴏᴜ ᴘᴜᴛ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴛᴀɢ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ ?")
-    reason = await client.ask(id,"ʜᴀᴠᴇ ᴀɴʏ  ʀᴇᴀsᴏɴ ᴛᴏ ᴊᴏɪɴɪɴɢ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ, ɪғ ʜᴀᴠᴇ ᴛʜᴇɴ ᴡʀɪᴛᴇ ɪᴛ ᴅᴏᴡɴ.")    
-    try:
+    if msg.chat.type!="private":
+        await msg.reply_text("this command can only be used in private")
+    else:
+     id=msg.chat.id   
+     first_name = msg.from_user.first_name
+     username = msg.from_user.username
+     user_id = msg.from_user.id
+     dc_id = msg.from_user.dc_id            
+     full_name = await client.ask(id,"ᴡʜᴀᴛ ɪs ʏᴏᴜʀ ғᴜʟʟ ɴᴀᴍᴇ ?")
+     age = await client.ask(id,"ʜᴏᴡ ᴏʟᴅ ᴀʀᴇ ʏᴏᴜ ?")
+     gender = await client.ask(id,"ᴡʜᴀᴛ's ʏᴏᴜʀ ɢᴇɴᴅᴇʀ ?")
+     channels = await client.ask(id,"ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟs ᴜsᴇʀɴᴀᴍᴇs")
+     groups = await client.ask(id,"ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴜsᴇʀɴᴀᴍᴇs")
+     bots = await client.ask(id,"ʏᴏᴜʀ ʙᴏᴛs ᴜsᴇʀɴᴀᴍᴇs")
+     country = await client.ask(id,"ғʀᴏᴍ ᴡʜɪᴄʜ ᴄᴏᴜɴᴛʀʏ ʏᴏᴜ ʙᴇʟᴏɴɢ ᴛᴏ ?")
+     skills = await client.ask(id,"ʜᴀᴠᴇ ᴀɴʏ sᴋɪʟʟ ?")
+     github = await client.ask(id,"ʜᴀᴠᴇ ɢɪᴛʜᴜʙ ᴀᴄᴄᴏᴜᴛ..?\nɢɪᴠᴇ ᴍᴇ ᴛʜᴇ ʟɪɴᴋ")
+     about = await client.ask(id,"ᴛᴇʟʟ ᴍᴇ sᴏᴍᴇᴛʜɪɴɢ ᴀʙᴏᴜᴛ ʏᴏᴜʀsᴇʟғ.")
+     tag = await client.ask(id,"ᴄᴀɴ ʏᴏᴜ ᴘᴜᴛ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ ᴛᴀɢ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ ?")
+     reason = await client.ask(id,"ʜᴀᴠᴇ ᴀɴʏ  ʀᴇᴀsᴏɴ ᴛᴏ ᴊᴏɪɴɪɴɢ ᴏᴜʀ ɴᴇᴛᴡᴏʀᴋ, ɪғ ʜᴀᴠᴇ ᴛʜᴇɴ ᴡʀɪᴛᴇ ɪᴛ ᴅᴏᴡɴ.")    
+     try:
         await app.send_message(VERIFICATION_CHANNEL_ID,
     f"""
  ❍═❰ 𝚅𝙴𝚁𝙸𝙵𝙸𝙲𝙰𝚃𝙸𝙾𝙽 𝙵𝙾𝚁𝙼 ❱═❍
@@ -103,7 +109,7 @@ async def verify(client,msg):
 """,
       reply_markup=InlineKeyboardMarkup (VERIFY_BUTTON)
      )
-    except Exception as e:
+     except Exception as e:
         await msg.reply_text("""
 ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ʀᴇᴘᴏʀᴛ ᴀᴛ ᴏᴜʀ [ʜᴇᴀᴅǫᴜᴀᴛᴇʀs](https://t.me/{HQ_USERNAME})
 """)
